@@ -18,7 +18,7 @@ const PROJECTS: Project[] = [
     number: '01 · 04',
     title: 'Östra Sjukhuset',
     body: 'Storskaligt väderskydd i Keder XL som höll genom två kraftiga stormar. Inga avbrott. Inga försenade arbetsdagar. Bara ett färdigt jobb.',
-    image: '/images/DJI_0404.jpg',
+    image: '/images/ostra-sjukhuset.jpg',
     status: featureFlags.ostraSjukhusetCase ? 'live' : 'soon',
   },
   {

@@ -44,9 +44,14 @@ export function Header() {
       >
         <div className="container-edge flex h-20 items-center justify-between md:h-24">
           <Link to="/" className="flex items-center gap-3" aria-label="SafeScaff hem">
-            <span className="font-display text-xl font-semibold tracking-tight md:text-2xl">
-              SafeScaff
-            </span>
+            <img
+              src="/images/safescaff-logga.png"
+              alt="SafeScaff"
+              className={cn(
+                'h-9 w-auto transition-[filter] duration-500 md:h-10',
+                !(scrolled || !isHome) && 'brightness-0 invert'
+              )}
+            />
           </Link>
 
           <nav className="hidden items-center gap-8 lg:flex" aria-label="Huvudmeny">
@@ -127,7 +132,11 @@ export function Header() {
             className="fixed inset-0 z-[60] bg-brand-black text-brand-white"
           >
             <div className="container-edge flex h-20 items-center justify-between md:h-24">
-              <span className="font-display text-xl font-semibold">SafeScaff</span>
+              <img
+                src="/images/safescaff-logga.png"
+                alt="SafeScaff"
+                className="h-9 w-auto brightness-0 invert"
+              />
               <button
                 type="button"
                 className="-mr-2 flex h-10 w-10 items-center justify-center"

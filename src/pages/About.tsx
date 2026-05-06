@@ -168,8 +168,13 @@ export function About() {
       </section>
 
       {featureFlags.gaisSponsorBadge && (
-        <section className="bg-brand-white py-12">
-          <div className="container-edge flex flex-wrap items-center justify-center gap-3 text-center">
+        <section className="bg-brand-white py-20 md:py-28">
+          <div className="container-edge flex flex-col items-center gap-8 text-center">
+            <ImageReveal
+              src="/images/gais-safescaff.jpg"
+              alt="SafeScaff sponsrar GAIS"
+              className="aspect-[3/4] w-full max-w-xs"
+            />
             <Reveal>
               <p className="label-mono text-brand-graphite">
                 Stolt sponsor av <span className="text-brand-green">GAIS</span>
