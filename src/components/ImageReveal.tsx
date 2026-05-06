@@ -21,20 +21,20 @@ export function ImageReveal({
   return (
     <motion.div
       className={cn('relative overflow-hidden', className)}
-      initial={{ clipPath: 'inset(100% 0 0 0)' }}
-      whileInView={{ clipPath: 'inset(0% 0 0 0)' }}
-      transition={{ duration: 1.2, delay, ease: [0.76, 0, 0.24, 1] }}
-      viewport={{ once: true, amount: 0.3 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <motion.img
         src={src}
         alt={alt}
         loading={loading}
         className={cn('h-full w-full object-cover', imgClassName)}
-        initial={{ scale: 1.15 }}
+        initial={{ scale: 1.08 }}
         whileInView={{ scale: 1 }}
-        transition={{ duration: 1.4, delay, ease: [0.22, 1, 0.36, 1] }}
-        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1.2, delay, ease: [0.22, 1, 0.36, 1] }}
+        viewport={{ once: true, amount: 0.2 }}
       />
     </motion.div>
   )
