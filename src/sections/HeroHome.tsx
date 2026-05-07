@@ -33,11 +33,11 @@ export function HeroHome() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="label-mono mb-6 block text-brand-green-light"
         >
-          Göteborg · Sedan 2017
+          Göteborg · STIB · Sedan 2017
         </motion.span>
 
         <TextReveal
-          text="Vi bygger säkra ställningar."
+          text="Ställningen som håller."
           as="h1"
           className="heading-hero text-brand-white"
           delay={0.4}
@@ -50,7 +50,9 @@ export function HeroHome() {
           transition={{ duration: 0.8, delay: 1.4 }}
           className="mt-8 max-w-xl text-[18px] text-white/80"
         >
-          Litet företag med stora muskler. STIB-medlem och Göteborgs mest pålitliga ställningsleverantör.
+          STIB-medlem. 20 000 kvm material i lager. Svar på offertförfrågan inom 24 timmar.
+          Vi reser byggnadsställningar och väderskydd i Göteborg som klarar både stormarna
+          och inspektörens checklista.
         </motion.p>
 
         <motion.div

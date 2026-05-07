@@ -4,6 +4,8 @@ import { TextReveal } from '@/components/TextReveal'
 import { Reveal } from '@/components/Reveal'
 import { site } from '@/config/site'
 
+const TRUST = ['STIB-medlem', '8 år', '20 000 kvm', 'Östra Sjukhuset', '24h svar']
+
 export function ContactCTA() {
   return (
     <section className="bg-brand-black py-32 text-brand-white md:py-48">
@@ -19,7 +21,8 @@ export function ContactCTA() {
         />
         <Reveal delay={0.2} y={30}>
           <p className="mx-auto mt-8 max-w-xl text-[17px] text-brand-gray">
-            Begär offert idag — vi återkommer inom 24 timmar.
+            Skicka en förfrågan eller ring direkt. Du får svar inom 24 timmar — eller samma dag om du
+            ringer Patrik.
           </p>
         </Reveal>
         <Reveal delay={0.3} y={20}>
@@ -33,6 +36,15 @@ export function ContactCTA() {
               {site.phone}
             </a>
           </div>
+        </Reveal>
+        <Reveal delay={0.4}>
+          <ul className="mx-auto mt-16 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-brand-gray">
+            {TRUST.map((t) => (
+              <li key={t} className="label-mono text-[12px]">
+                {t}
+              </li>
+            ))}
+          </ul>
         </Reveal>
       </div>
     </section>
