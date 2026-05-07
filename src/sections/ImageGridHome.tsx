@@ -2,16 +2,17 @@ import { ImageReveal } from '@/components/ImageReveal'
 
 const IMAGES = [
   { src: '/images/byggstallning-safescaff-2100x800.jpg', alt: 'Byggnadsställning monterad på flerbostadshus i Göteborg' },
-  { src: '/images/stallningar-2100x800.jpg', alt: 'Stora industriella ställningar' },
+  { src: '/images/ostra-sjukhuset.jpg', alt: 'Väderskydd över Östra Sjukhuset' },
   { src: '/images/byggstallning-ss-2100x800.jpg', alt: 'Närbild på Layher modulställning' },
-  { src: '/images/IMG_6516.jpg', alt: 'Pågående montering' },
+  { src: '/images/IMG_6516.jpg', alt: 'Pågående montering på arbetsplats i Göteborg' },
+  { src: '/images/IMG_1483-scaled.jpg', alt: 'Storskaligt väderskydd över byggprojekt' },
   { src: '/images/20F302A50333497A4FCB8ACE21551B56-scaled-2100x800.jpg', alt: 'Färdig fasadställning' },
 ]
 
 export function ImageGridHome() {
   return (
     <section className="bg-brand-offwhite">
-      <div className="grid grid-cols-2 gap-px bg-brand-gray-light md:grid-cols-3 lg:grid-cols-5">
+      <div className="grid grid-cols-2 gap-px bg-brand-gray-light md:grid-cols-3 lg:grid-cols-6">
         {IMAGES.map((img, i) => (
           <ImageReveal
             key={img.src}

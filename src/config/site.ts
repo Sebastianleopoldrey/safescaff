@@ -18,11 +18,12 @@ export const site = {
   team: [
     {
       name: 'Patrik Spahiu',
-      role: 'VD',
+      role: 'VD & grundare',
       phone: '0705-83 12 26',
       phoneTel: '+46705831226',
       email: 'patrik@safescaff.se',
       image: '/images/patrik.webp',
+      bio: 'Bygger SafeScaff sedan 2017. Tar varje samtal personligen — och varje jobb i mål.',
     },
     {
       name: 'Christian Hahne',
@@ -30,7 +31,8 @@ export const site = {
       phone: '0705-83 18 91',
       phoneTel: '+46705831891',
       email: 'christian@safescaff.se',
-      image: '/images/Christian-500x500.jpg',
+      image: '/images/christian.jpg',
+      bio: 'Planerar montagen så att din byggtid håller. Pratar gärna teknik och tidsplaner.',
     },
   ],
 } as const

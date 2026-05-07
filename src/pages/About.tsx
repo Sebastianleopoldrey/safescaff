@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { TextReveal } from '@/components/TextReveal'
 import { Reveal } from '@/components/Reveal'
 import { ImageReveal } from '@/components/ImageReveal'
+import { TeamGrid } from '@/components/TeamGrid'
 import { ContactCTA } from '@/sections/ContactCTA'
 import { site } from '@/config/site'
 import { featureFlags } from '@/config/featureFlags'
@@ -11,18 +12,18 @@ import { featureFlags } from '@/config/featureFlags'
 const VALUES = [
   {
     icon: Shield,
-    label: 'Säkerhet',
-    body: 'Inget kompromissas på säkerhet. Aldrig. Det är därför vi är STIB-medlem och varför vi tackar nej till jobb som inte kan göras tryggt.',
+    label: 'Säkerhet före allt',
+    body: 'Vi tackar nej till jobb som inte kan göras tryggt. STIB-medlem sedan dag ett. Varje montör har dokumenterad utbildning och varje skarv kontrolleras.',
   },
   {
     icon: Award,
-    label: 'Kvalitet',
-    body: 'Layher-material, STIB-utbildade montörer och kontroll på varje överlämning. När vi lämnar arbetsplatsen står ställningen rätt.',
+    label: 'Materialet håller',
+    body: 'Layher Allround och Speedyscaff. Ingen blandning av begagnat och okänt. När vi reser ställning ska den klara både stormarna och inspektörens checklista.',
   },
   {
     icon: MapPin,
-    label: 'Lokalt',
-    body: 'Vi är från Göteborg och stannar här. Det betyder kortare ledtider, snabbare svar och ett team som kan staden lika bra som du.',
+    label: 'Vi är från Göteborg',
+    body: 'Lager i Mölndal, montörer som bor i staden. Det betyder kortare ledtider, snabbare svar — och samma personer från första samtal till sista demontering.',
   },
 ]
 
@@ -44,9 +45,9 @@ export function About() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="label-mono mb-6 text-brand-green-light"
           >
-            Om oss
+            Om SafeScaff
           </motion.span>
-          <TextReveal text="Vi är SafeScaff." as="h1" className="heading-hero text-brand-white" />
+          <TextReveal text="Litet företag. Stora muskler." as="h1" className="heading-hero text-brand-white" />
         </div>
       </section>
 
@@ -57,21 +58,24 @@ export function About() {
           </Reveal>
           <div>
             <TextReveal
-              text="Från enmansföretag till STIB-medlem."
+              text="Från enmansföretag till STIB-medlem på åtta år."
               as="h2"
               className="heading-section text-brand-black"
             />
             <Reveal delay={0.2} y={30}>
               <div className="mt-8 space-y-6 text-[17px] leading-relaxed text-brand-graphite">
                 <p>
-                  SafeScaff grundades 2017 med en idé som låter självklar men som få ställningsföretag faktiskt
-                  lever efter: säkerhet före allt annat. Patrik startade ensam, byggde ställning på ställning och
-                  vägrade tumma på de detaljer som kostar i längden — kontroller, koppel, varje skarv.
+                  Patrik Spahiu startade SafeScaff 2017 med en bil, ett släp och en princip — säkerhet före allt
+                  annat. Första jobben var villor i Lerum och Härryda. Inga prestige­projekt. Bara hantverk som
+                  hängde ihop.
                 </p>
                 <p>
-                  Idag, åtta år senare, förvaltar vi över 20 000 kvadratmeter material från ett lager i Mölndal.
-                  Vi är STIB-medlem och vi har levererat allt från villarenoveringar till Östra Sjukhuset.
-                  Men principen står fast: litet företag med stora muskler — och ett orubbligt fokus på safety first.
+                  Åtta år senare förvaltar vi över 20 000 kvadratmeter Layher-material från ett lager i Mölndal.
+                  Vi är medlemmar i STIB, vi har levererat allt från BRF-fasader till väderskyddet på Östra
+                  Sjukhuset, och vi har fortfarande aldrig haft en allvarlig olycka på en av våra ställningar.
+                </p>
+                <p className="text-brand-black">
+                  Det är ingen tillfällighet. Det är en metod.
                 </p>
               </div>
             </Reveal>
@@ -79,33 +83,12 @@ export function About() {
         </div>
       </section>
 
-      <section className="bg-brand-offwhite py-24 md:py-32">
-        <div className="container-edge">
-          <div className="mb-16 max-w-2xl">
-            <Reveal>
-              <span className="label-mono text-brand-green">Teamet</span>
-            </Reveal>
-            <TextReveal text="Människor du kan ringa." as="h2" className="heading-section mt-6 text-brand-black" />
-          </div>
-          <div className="grid gap-12 md:grid-cols-2">
-            {site.team.map((m, i) => (
-              <Reveal key={m.email} delay={i * 0.1} y={40}>
-                <article>
-                  <ImageReveal src={m.image} alt={m.name} className="aspect-[4/5] w-full" />
-                  <div className="mt-6 flex items-baseline justify-between">
-                    <h3 className="font-display text-2xl font-semibold tracking-tight text-brand-black">{m.name}</h3>
-                    <span className="label-mono text-brand-gray">{m.role}</span>
-                  </div>
-                  <div className="mt-4 flex flex-col gap-1 text-[15px] text-brand-graphite">
-                    <a href={`tel:${m.phoneTel}`} className="hover:text-brand-green">{m.phone}</a>
-                    <a href={`mailto:${m.email}`} className="hover:text-brand-green">{m.email}</a>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TeamGrid
+        members={site.team}
+        eyebrow="Vårt team"
+        heading="Två som svarar i telefon."
+        intro="Hos oss pratar du direkt med den som planerar ditt jobb — och med den som är ute på arbetsplatsen. Inga växlar, inga lead-formulär, inga säljare. Bara två personer som tar ansvar."
+      />
 
       <section className="bg-brand-white py-24 md:py-32">
         <div className="container-edge">
@@ -113,14 +96,16 @@ export function About() {
             <Reveal>
               <span className="label-mono text-brand-green">Värderingar</span>
             </Reveal>
-            <TextReveal text="Tre pelare. Inga kompromisser." as="h2" className="heading-section mt-6 text-brand-black" />
+            <TextReveal text="Tre pelare. Inga undantag." as="h2" className="heading-section mt-6 text-brand-black" />
           </div>
           <ul className="grid gap-px border border-brand-gray-light bg-brand-gray-light md:grid-cols-3">
             {VALUES.map((v, i) => (
               <Reveal key={v.label} delay={i * 0.1} y={30}>
                 <li className="flex h-full flex-col bg-brand-white p-8 md:p-10">
                   <v.icon size={28} className="text-brand-green" />
-                  <h3 className="mt-8 font-display text-2xl font-semibold tracking-tight text-brand-black">{v.label}</h3>
+                  <h3 className="mt-8 font-display text-2xl font-semibold tracking-tight text-brand-black">
+                    {v.label}
+                  </h3>
                   <p className="mt-4 text-[15px] text-brand-graphite">{v.body}</p>
                 </li>
               </Reveal>
@@ -142,16 +127,16 @@ export function About() {
               <span className="label-mono text-brand-green">Certifiering</span>
             </Reveal>
             <TextReveal
-              text="Medlem i STIB."
+              text="Medlem i STIB sedan 2017."
               as="h2"
               className="heading-section mt-6 text-brand-black"
             />
             <Reveal delay={0.2} y={30}>
-              <p className="mt-8 max-w-xl text-[17px] text-brand-graphite">
-                STIB är branschorganisationen för Sveriges seriösa ställningsföretag. Medlemskapet kräver att vi
-                följer Arbetsmiljöverkets föreskrifter, har utbildade montörer och dokumenterad kvalitetskontroll
-                — och att vi blir granskade när vi inte räknar med det. För dig som beställare betyder det en sak:
-                trygghet att ställningen är byggd rätt.
+              <p className="mt-8 max-w-xl text-[17px] leading-relaxed text-brand-graphite">
+                STIB är branschorganisationen för Sveriges seriösa ställningsentreprenörer. Medlemskapet kräver
+                STIB-utbildade montörer, dokumenterad kvalitetskontroll, och att vi följer Arbetsmiljöverkets
+                föreskrifter (AFS 2013:4) — och att vi blir granskade när vi inte räknar med det. För dig som
+                beställer betyder det en sak: ställningen är byggd rätt, varje gång.
               </p>
             </Reveal>
             <Reveal delay={0.3} y={20}>
@@ -159,7 +144,7 @@ export function About() {
                 to="/kontakt"
                 className="group mt-8 inline-flex items-center gap-2 text-[15px] font-medium text-brand-black hover:text-brand-green"
               >
-                Hör av dig till oss
+                Begär offert
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
             </Reveal>
@@ -168,18 +153,17 @@ export function About() {
       </section>
 
       {featureFlags.gaisSponsorBadge && (
-        <section className="bg-brand-white py-20 md:py-28">
-          <div className="container-edge flex flex-col items-center gap-8 text-center">
-            <ImageReveal
+        <section className="bg-brand-white py-12">
+          <div className="container-edge flex flex-wrap items-center justify-center gap-5 text-center">
+            <img
               src="/images/gais-safescaff.jpg"
               alt="SafeScaff sponsrar GAIS"
-              className="aspect-[3/4] w-full max-w-xs"
+              className="h-14 w-14 rounded-full object-cover"
+              loading="lazy"
             />
-            <Reveal>
-              <p className="label-mono text-brand-graphite">
-                Stolt sponsor av <span className="text-brand-green">GAIS</span>
-              </p>
-            </Reveal>
+            <p className="label-mono text-brand-graphite">
+              Stolt sponsor av <span className="text-brand-green">GAIS</span>
+            </p>
           </div>
         </section>
       )}

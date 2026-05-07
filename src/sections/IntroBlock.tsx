@@ -51,14 +51,14 @@ export function IntroBlock() {
 
         <div className="lg:sticky lg:top-32">
           <ImageReveal
-            src="/images/patrik.webp"
-            alt="Patrik Spahiu, VD på SafeScaff"
+            src="/images/IMG_1116-scaled.jpg"
+            alt="Storskalig fasadställning byggd av SafeScaff i Göteborg"
             className="aspect-[4/5] w-full"
           />
           <Reveal delay={0.2}>
             <div className="mt-4 flex items-baseline justify-between text-[13px] text-brand-graphite">
-              <span>Patrik Spahiu</span>
-              <span className="label-mono">VD · SafeScaff</span>
+              <span>Pågående projekt</span>
+              <span className="label-mono">Göteborg · 2024</span>
             </div>
           </Reveal>
         </div>
