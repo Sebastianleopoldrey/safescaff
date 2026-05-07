@@ -62,11 +62,11 @@ export function HeroHome() {
           className="mt-10 flex flex-wrap items-center gap-3"
         >
           <Link to="/kontakt" className="btn-primary group">
-            Begär offert
+            Få offert inom 24h
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </Link>
           <a href="#tjanster" className="btn-ghost text-brand-white">
-            Våra tjänster
+            Se vad vi gör
           </a>
         </motion.div>
       </motion.div>
