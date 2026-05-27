@@ -13,44 +13,24 @@ const NAV = [
 ]
 
 export function Header() {
-  const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const location = useLocation()
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   useEffect(() => {
     setOpen(false)
     setServicesOpen(false)
   }, [location.pathname])
 
-  const isHome = location.pathname === '/'
-
   return (
     <>
-      <header
-        className={cn(
-          'fixed inset-x-0 top-0 z-50 transition-[background,backdrop-filter,color] duration-500',
-          scrolled || !isHome
-            ? 'bg-brand-white/95 text-brand-black backdrop-blur-md'
-            : 'bg-transparent text-brand-white'
-        )}
-      >
+      <header className="fixed inset-x-0 top-0 z-50 bg-brand-white/95 text-brand-black backdrop-blur-md">
         <div className="container-edge flex h-20 items-center justify-between md:h-24">
           <Link to="/" className="flex items-center gap-3" aria-label="SafeScaff hem">
             <img
               src="/images/safescaff-logga.png"
               alt="SafeScaff"
-              className={cn(
-                'h-9 w-auto transition-[filter] duration-500 md:h-10',
-                !(scrolled || !isHome) && 'brightness-0 invert'
-              )}
+              className="h-9 w-auto md:h-10"
             />
           </Link>
 

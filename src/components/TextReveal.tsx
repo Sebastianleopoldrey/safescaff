@@ -50,7 +50,7 @@ export function TextReveal({
       viewport={{ once, amount: 0.4 }}
     >
       {words.map((w, i) => (
-        <span key={i} className="inline-block overflow-hidden align-bottom pr-[0.25em] last:pr-0">
+        <span key={i} className="inline-block overflow-hidden align-bottom pr-[0.25em] pb-[0.15em] last:pr-0">
           <motion.span variants={word} className="inline-block">
             {w}
           </motion.span>
