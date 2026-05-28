@@ -10,7 +10,7 @@ export const site = {
     visiting: 'Kungsbackavägen 152, 431 90 Mölndal',
     invoice: 'Box 24124, 400 22 Göteborg',
   },
-  hours: 'Mån–fre 06:30–16, lör–sön stängt',
+  hours: 'Mån–fre 07–16, lör–sön stängt',
   social: {
     instagram: 'https://www.instagram.com/safescaff',
     facebook: 'https://www.facebook.com/GothenburgAB',

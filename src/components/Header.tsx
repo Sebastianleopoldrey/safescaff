@@ -26,7 +26,11 @@ export function Header() {
     <>
       <header className="fixed inset-x-0 top-0 z-50 bg-brand-white/95 text-brand-black backdrop-blur-md">
         <div className="container-edge flex h-20 items-center justify-between md:h-24">
-          <Link to="/" className="flex items-center gap-3" aria-label="SafeScaff hem">
+          <Link
+            to="/"
+            className="flex items-center gap-3 transition-opacity hover:opacity-70"
+            aria-label="SafeScaff hem"
+          >
             <img
               src="/images/safescaff-logga.png"
               alt="SafeScaff"
@@ -35,6 +39,15 @@ export function Header() {
           </Link>
 
           <nav className="hidden items-center gap-8 lg:flex" aria-label="Huvudmeny">
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) =>
+                cn('text-[15px] font-medium transition-opacity', isActive ? 'opacity-100' : 'opacity-80 hover:opacity-100')
+              }
+            >
+              Hem
+            </NavLink>
             <div
               className="relative"
               onMouseEnter={() => setServicesOpen(true)}
