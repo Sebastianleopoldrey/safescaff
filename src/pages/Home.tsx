@@ -38,7 +38,7 @@ const HOME_FAQ = [
     a: 'Skadade sektioner byts utan extra kostnad om felet inte beror på åverkan från entreprenör eller vandalisering. Service och justeringar ingår — det är skillnaden mellan att hyra av oss och att hyra från en bilfirma.',
   },
   {
-    q: 'Anlitar ni privatpersoner?',
+    q: 'Tar ni uppdrag från privatpersoner?',
     a: 'Absolut. Villor, radhus, sommarstugor — vi gör små projekt lika seriöst som stora. Speedyscaff aluminium passar utmärkt för ensamhus och kortare hyresperioder.',
   },
 ]
