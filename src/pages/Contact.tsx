@@ -107,6 +107,11 @@ export function Contact() {
                 Fyll i formuläret så återkommer vi inom 24 timmar med nästa steg.
               </p>
             </Reveal>
+            <Reveal delay={0.3} y={30}>
+              <p className="mt-6 max-w-md text-[17px] text-brand-graphite">
+                Intresserad? Kontakta oss. Hör gärna av dig till oss vid frågor eller om du önskar offert!
+              </p>
+            </Reveal>
 
             <div className="mt-12 space-y-4 text-[15px] text-brand-graphite">
               <p className="flex items-start gap-3">

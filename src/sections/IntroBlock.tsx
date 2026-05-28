@@ -21,10 +21,10 @@ export function IntroBlock() {
           />
           <Reveal delay={0.15} y={30}>
             <p className="mt-8 max-w-xl text-[18px] text-brand-graphite">
-              Sedan 2017 har SafeScaff vuxit från ett enmansföretag till Göteborgs mest betrodda
-              ställningsleverantör. Idag förvaltar vi över 20 000 kvadratmeter material och bygger
-              vidare på en enda orubblig princip: <em className="not-italic text-brand-black">safety first</em>.
-              Vi är litet nog att svara samma dag — och stort nog att leverera Östra Sjukhuset.
+              Vi utför montering och demontering samt uthyrning av byggnadsställningar och väderskydd.
+              Våra ambitioner är säkerhet, god service och kvalitet vilket leder till en nöjd kund.
+              Hyr du ställningar utav oss ordnar vi allt med transport, montering/demontering och vi
+              ser framörallt till att du har en säker och trygg arbetsplats att jobba ifrån.
             </p>
           </Reveal>
 
