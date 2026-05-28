@@ -33,7 +33,7 @@ export function HeroHome() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="label-mono mb-6 block text-brand-green-light"
         >
-          Göteborg · STIB · Sedan 2017
+          Göteborg · STIB-medlem sedan 2023
         </motion.span>
 
         <TextReveal
