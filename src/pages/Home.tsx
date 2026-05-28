@@ -51,11 +51,11 @@ export function Home() {
   return (
     <>
       <HeroHome />
+      <IntroBlock />
       <TrustBand />
       <WhatWeDo />
       <ImageGridHome />
       <WhenYouNeedUs />
-      <IntroBlock />
       <HowItWorks />
       <ProjectCarousel />
       <PricingTransparency />

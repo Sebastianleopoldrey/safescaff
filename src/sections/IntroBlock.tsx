@@ -15,7 +15,7 @@ export function IntroBlock() {
             <span className="label-mono text-brand-green">Om SafeScaff</span>
           </Reveal>
           <TextReveal
-            text="Litet företag med stora muskler."
+            text="Göteborgs ställningsexperter."
             as="h2"
             className="heading-section mt-6 text-brand-black"
           />
