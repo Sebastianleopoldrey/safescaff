@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react'
@@ -54,7 +54,6 @@ const PROJECTS: Project[] = [
 
 export function ProjectCarousel() {
   const trackRef = useRef<HTMLDivElement>(null)
-  const [active, setActive] = useState(0)
 
   const scroll = (dir: 1 | -1) => {
     const track = trackRef.current
@@ -62,7 +61,6 @@ export function ProjectCarousel() {
     const card = track.querySelector('[data-card]') as HTMLElement | null
     const w = card ? card.offsetWidth + 24 : 600
     track.scrollBy({ left: dir * w, behavior: 'smooth' })
-    setActive((prev) => Math.max(0, Math.min(PROJECTS.length - 1, prev + dir)))
   }
 
   return (
@@ -105,15 +103,11 @@ export function ProjectCarousel() {
         data-lenis-prevent
         className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-[clamp(20px,4vw,64px)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
-        {PROJECTS.map((p, i) => {
+        {PROJECTS.map((p) => {
           const isLink = !!p.href && p.status === 'live'
           const cardWidth = { width: 'min(560px, 85vw)' }
           const inner = (
-            <motion.article
-              data-card
-              initial={{ opacity: 0.4 }}
-              animate={{ opacity: i === active ? 1 : 0.6 }}
-            >
+            <motion.article data-card>
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-brand-gray-light">
                 <img
                   src={p.image}
@@ -122,7 +116,7 @@ export function ProjectCarousel() {
                   loading="lazy"
                 />
                 {p.status === 'soon' && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-brand-black/60">
+                  <div className="absolute inset-0 flex items-center justify-center bg-brand-black/75">
                     <span className="label-mono text-brand-white">Bilder kommer</span>
                   </div>
                 )}
