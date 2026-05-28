@@ -86,7 +86,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'Vad kostar ett väderskydd?',
-    a: 'Beror på spännvidd, yta, hyrestid och konstruktionens komplexitet. För ett genomsnittligt fasadprojekt ligger det mellan 40 000 och 200 000 kr. Vi tar fram en fast offert efter platsbesök.',
+    a: 'Priset beror på spännvidd, yta, hyrestid och konstruktionens komplexitet — varje projekt är unikt. Vi tar fram en fast offert efter platsbesök, utan dolda kostnader. Platsbesök och offert är alltid kostnadsfria.',
   },
   {
     q: 'Hur länge tar det att resa ett storskaligt väderskydd?',

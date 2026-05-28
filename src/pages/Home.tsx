@@ -18,10 +18,6 @@ const HOME_FAQ = [
     a: 'Platsbesök inom 24 timmar i Göteborgsregionen. Offert inom 1–3 arbetsdagar efter besöket. Själva monteringen schemaläggs i samråd — för en typisk villa kan vi ofta vara på plats inom 1–2 veckor.',
   },
   {
-    q: 'Vad kostar det att hyra ställning?',
-    a: 'Det beror på storlek, höjd, system och hyrestid. En enklare villaställning landar normalt på 8 000–25 000 kr, en BRF-fasad mellan 60 000 och 250 000 kr. Vi ger en fast offert efter platsbesök — inga dolda kostnader, inga "tillkommer"-poster.',
-  },
-  {
     q: 'Måste jag söka tillstånd?',
     a: 'På egen tomt: nej. På allmän mark, trottoar eller väg: ja, då krävs polistillstånd och en TA-plan (trafikanordningsplan). Vi sköter ansökningarna åt dig — det ingår normalt i offerten.',
   },

@@ -74,7 +74,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'Vad kostar det att hyra byggställning i Göteborg?',
-    a: 'Priset beror på yta, höjd, hyrestid och åtkomst. För villarenovering ligger normalintervallet på 8 000–25 000 kr inklusive montage och demontering. Vi tar fram en fast offert efter platsbesök — utan dolda kostnader.',
+    a: 'Priset beror på yta, höjd, hyrestid och åtkomst — varje projekt är unikt. Vi tar fram en fast offert efter platsbesök, utan dolda kostnader och utan tillkommande poster i efterhand. Platsbesök och offert är alltid kostnadsfria.',
   },
   {
     q: 'Vad är skillnaden mellan Layher Allround och Speedyscaff?',

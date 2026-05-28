@@ -81,7 +81,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'Vad kostar det att hyra byggstaket?',
-    a: 'Cirkapris i Göteborg: 25–45 kr per löpmeter och vecka beroende på sektionstyp och hyrestid. Längre hyresperioder ger lägre veckopriser. Grindar, ID06 och insynsskydd specificeras separat.',
+    a: 'Priset sätts per löpmeter och vecka, och påverkas av sektionstyp och hyrestid. Längre hyresperioder ger lägre veckopris. Grindar, ID06 och insynsskydd specificeras separat i offerten. Platsbesök och offert är alltid kostnadsfria.',
   },
   {
     q: 'Ingår underhåll om något händer under hyresperioden?',
