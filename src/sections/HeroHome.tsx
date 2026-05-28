@@ -37,7 +37,7 @@ export function HeroHome() {
         </motion.span>
 
         <TextReveal
-          text="Ställningen som håller."
+          text="Vi bygger säkra ställningar"
           as="h1"
           className="heading-hero text-brand-white"
           delay={0.4}
