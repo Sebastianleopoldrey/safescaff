@@ -3,7 +3,7 @@ import { Reveal } from '@/components/Reveal'
 const STATS = [
   { value: '8 år', label: 'På marknaden' },
   { value: '20 000 m²', label: 'Material i lager' },
-  { value: 'STIB', label: 'Medlem sedan 2023' },
+  { value: 'STIB', label: 'Medlem sedan 2024' },
   { value: 'Layher', label: 'Systemleverantör' },
   { value: '24h', label: 'Svar på offert' },
 ]

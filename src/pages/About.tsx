@@ -13,7 +13,7 @@ const VALUES = [
   {
     icon: Shield,
     label: 'Säkerhet före allt',
-    body: 'Vi tackar nej till jobb som inte kan göras tryggt. STIB-medlem sedan 2023. Varje montör har dokumenterad utbildning och varje skarv kontrolleras.',
+    body: 'Vi tackar nej till jobb som inte kan göras tryggt. STIB-medlem sedan 2024. Varje montör har dokumenterad utbildning och varje skarv kontrolleras.',
   },
   {
     icon: Award,
@@ -58,7 +58,7 @@ export function About() {
           </Reveal>
           <div>
             <TextReveal
-              text="Från enmansföretag 2017 till STIB-medlem 2023."
+              text="Från enmansföretag 2017 till STIB-medlem 2024."
               as="h2"
               className="heading-section text-brand-black"
             />
@@ -71,7 +71,7 @@ export function About() {
                 </p>
                 <p>
                   Åtta år senare förvaltar vi över 20 000 kvadratmeter Layher-material från ett lager i Mölndal.
-                  Vi är medlemmar i STIB sedan 2023, vi har levererat allt från BRF-fasader till väderskyddet
+                  Vi är medlemmar i STIB sedan 2024, vi har levererat allt från BRF-fasader till väderskyddet
                   på Östra Sjukhuset, och vi har fortfarande aldrig haft en allvarlig olycka på en av våra
                   ställningar.
                 </p>
@@ -128,7 +128,7 @@ export function About() {
               <span className="label-mono text-brand-green">Certifiering</span>
             </Reveal>
             <TextReveal
-              text="Medlem i STIB sedan 2023."
+              text="Medlem i STIB sedan 2024."
               as="h2"
               className="heading-section mt-6 text-brand-black"
             />

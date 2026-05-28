@@ -4,7 +4,7 @@ import { TextReveal } from '@/components/TextReveal'
 import { Reveal } from '@/components/Reveal'
 import { site } from '@/config/site'
 
-const TRUST = ['STIB-medlem sedan 2023', '8 år', '20 000 kvm', 'Östra Sjukhuset', '24h svar']
+const TRUST = ['STIB-medlem sedan 2024', '8 år', '20 000 kvm', 'Östra Sjukhuset', '24h svar']
 
 export function ContactCTA() {
   return (

@@ -4,7 +4,7 @@ import { Reveal } from '@/components/Reveal'
 import { TextReveal } from '@/components/TextReveal'
 import { ImageReveal } from '@/components/ImageReveal'
 
-const STATS = ['8 ÅR', '20 000 KVM', 'STIB SEDAN 2023', 'GÖTEBORG']
+const STATS = ['8 ÅR', '20 000 KVM', 'STIB SEDAN 2024', 'GÖTEBORG']
 
 export function IntroBlock() {
   return (
