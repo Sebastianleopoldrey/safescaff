@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Shield, Award, MapPin } from 'lucide-react'
+import { ArrowRight, Shield, HardHat, Ruler, MapPin } from 'lucide-react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { TextReveal } from '@/components/TextReveal'
 import { Reveal } from '@/components/Reveal'
@@ -8,26 +8,38 @@ import { TeamGrid } from '@/components/TeamGrid'
 import { ContactCTA } from '@/sections/ContactCTA'
 import { site } from '@/config/site'
 import { featureFlags } from '@/config/featureFlags'
+import { useDocumentMeta } from '@/hooks/useDocumentMeta'
 
 const VALUES = [
   {
-    icon: Shield,
-    label: 'Säkerhet före allt',
-    body: 'Vi tackar nej till jobb som inte kan göras tryggt. STIB-medlem sedan 2024. Varje montör har dokumenterad utbildning och varje skarv kontrolleras.',
+    icon: HardHat,
+    label: 'Erfarna i alla led',
+    body: 'Lång erfarenhet av allt från villarenoveringar till stora kommersiella fastigheter och industri. Rätt utbildning och kompetens i varje moment — ställningen monteras korrekt, stabilt och säkert oavsett komplexitet.',
   },
   {
-    icon: Award,
-    label: 'Materialet håller',
-    body: 'Layher Allround och Speedyscaff. Ingen blandning av begagnat och okänt. När vi reser ställning ska den klara både stormarna och inspektörens checklista.',
+    icon: Shield,
+    label: 'Säkerhet i varje moment',
+    body: 'Säkerhet är kärnan i allt vi gör. Tydliga rutiner och noggranna kontroller innan ställningen tas i bruk skyddar både hantverkare och omgivning — och ger effektivare arbetsdagar.',
+  },
+  {
+    icon: Ruler,
+    label: 'Skräddarsydda lösningar',
+    body: 'Alla projekt är unika. Vi utgår från byggnadens förutsättningar och dina önskemål och bygger en funktionell ställning som sparar både tid och kostnad.',
   },
   {
     icon: MapPin,
-    label: 'Vi är från Göteborg',
-    body: 'Lager i Mölndal, montörer som bor i staden. Det betyder kortare ledtider, snabbare svar — och samma personer från första samtal till sista demontering.',
+    label: 'Lokal närvaro',
+    body: 'Förankrade i Göteborg och Kungsbacka. Korta beslutsvägar, personlig service och snabb respons — vi är stolta över vårt rykte och strävar alltid efter att överträffa förväntningarna.',
   },
 ]
 
 export function About() {
+  useDocumentMeta({
+    title: 'Om SafeScaff — ställningar i Göteborg & Kungsbacka sedan 2017',
+    description:
+      'Litet företag med stora muskler. ~20 000 kvm ställning, Layher-system och safety first sedan 2017. Medlem i STIB.',
+  })
+
   const { scrollY } = useScroll()
   const y = useTransform(scrollY, [0, 600], [0, 160])
 
@@ -47,7 +59,7 @@ export function About() {
           >
             Om SafeScaff
           </motion.span>
-          <TextReveal text="Litet företag. Stora muskler." as="h1" className="heading-hero text-brand-white" />
+          <TextReveal text="Litet företag med stora muskler" as="h1" className="heading-hero text-brand-white" />
         </div>
       </section>
 
@@ -58,25 +70,27 @@ export function About() {
           </Reveal>
           <div>
             <TextReveal
-              text="Från enmansföretag 2017 till STIB-medlem 2024."
+              text="Från villarenovering till industriuppdrag."
               as="h2"
               className="heading-section text-brand-black"
             />
             <Reveal delay={0.2} y={30}>
               <div className="mt-8 space-y-6 text-[17px] leading-relaxed text-brand-graphite">
                 <p>
-                  Patrik Spahiu startade SafeScaff 2017 med en bil, ett släp och en princip — säkerhet före allt
-                  annat. Första jobben var villor i Lerum och Härryda. Inga prestige­projekt. Bara hantverk som
-                  hängde ihop.
+                  SafeScaff grundades 2017 i Göteborg. Sedan dess har vi vuxit till ett lager på cirka
+                  20 000 kvm ställning — tillräckligt för att klara projekt i alla storlekar, från
+                  villarenoveringen på gatan till fasad- och industriuppdrag åt kommersiella fastigheter.
+                  Varje jobb är lika viktigt för oss, stort som smått.
                 </p>
                 <p>
-                  Åtta år senare förvaltar vi över 20 000 kvadratmeter Layher-material från ett lager i Mölndal.
-                  Vi är medlemmar i STIB sedan 2024, vi har levererat allt från BRF-fasader till väderskyddet
-                  på Östra Sjukhuset, och vi har fortfarande aldrig haft en allvarlig olycka på en av våra
-                  ställningar.
+                  Vårt ledord är safety first. När du hyr en ställning av oss ska du kunna lita på att den är
+                  rätt monterad, stabil och säker — varje gång. Vi finns med från projektets första dag till
+                  sista, och genom tydlig kommunikation anpassar vi ställningen efter just dina behov.
                 </p>
                 <p className="text-brand-black">
-                  Det är ingen tillfällighet. Det är en metod.
+                  Vi bygger med Layher: modul allround för speciallösningar och Speedyscaff i aluminium för de
+                  enklare jobben. Det ger oss flexibiliteten att lösa både komplexa konstruktioner och snabba
+                  uppdrag med samma höga kvalitet.
                 </p>
               </div>
             </Reveal>
@@ -95,15 +109,23 @@ export function About() {
         <div className="container-edge">
           <div className="mb-16 max-w-2xl">
             <Reveal>
-              <span className="label-mono text-brand-green">Värderingar</span>
+              <span className="label-mono text-brand-green">Helhetsansvar</span>
             </Reveal>
-            <TextReveal text="Tre pelare. Inga undantag." as="h2" className="heading-section mt-6 text-brand-black" />
+            <TextReveal text="Varför välja oss" as="h2" className="heading-section mt-6 text-brand-black" />
+            <Reveal delay={0.2} y={30}>
+              <p className="mt-8 text-[17px] leading-relaxed text-brand-graphite">
+                När du anlitar SafeScaff får du mer än en leverantör av byggnadsställningar — du får en partner
+                som tar ansvar för hela processen, från transport och montering till säkerhetskontroll och
+                demontering. Vi arbetar alltid enligt gällande regler och branschstandard, med punktlighet och
+                yrkesstolthet, så att ditt projekt flyter på utan onödiga avbrott.
+              </p>
+            </Reveal>
           </div>
-          <ul className="grid gap-px border border-brand-gray-light bg-brand-gray-light md:grid-cols-3">
+          <ul className="grid gap-px border border-brand-gray-light bg-brand-gray-light md:grid-cols-2">
             {VALUES.map((v, i) => (
               <Reveal key={v.label} delay={i * 0.1} y={30}>
                 <li className="flex h-full flex-col bg-brand-white p-8 md:p-10">
-                  <v.icon size={28} className="text-brand-green" />
+                  <v.icon size={28} className="text-brand-green" aria-hidden="true" />
                   <h3 className="mt-8 font-display text-2xl font-semibold tracking-tight text-brand-black">
                     {v.label}
                   </h3>
