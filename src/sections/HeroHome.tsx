@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, ArrowDown } from 'lucide-react'
 import { TextReveal } from '@/components/TextReveal'
+import { Prose } from '@/components/site/prose'
 
 export function HeroHome() {
   const ref = useRef<HTMLDivElement>(null)
@@ -52,16 +53,21 @@ export function HeroHome() {
           stagger={0.08}
         />
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.4 }}
-          className="mt-8 hidden max-w-xl text-[18px] text-white/80 md:block"
+          className="mt-8 hidden md:block"
         >
-          STIB-medlem. 20 000 kvm material i lager. Svar på offertförfrågan inom 24 timmar.
-          Vi reser byggnadsställningar och väderskydd i Göteborg som klarar både stormarna
-          och inspektörens checklista.
-        </motion.p>
+          <Prose
+            className="max-w-xl text-[18px] text-white/80"
+            text={
+              '**STIB-medlem.** **20 000 kvm** material i lager.\n' +
+              'Svar på offertförfrågan **inom 24 timmar**.\n' +
+              'Vi reser **byggnadsställningar och väderskydd** i Göteborg som klarar både **stormarna** och **inspektörens checklista**.'
+            }
+          />
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
