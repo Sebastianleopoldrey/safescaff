@@ -13,13 +13,16 @@ export function HeroHome() {
   return (
     <section ref={ref} className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-brand-black text-brand-white">
       <motion.div className="absolute inset-0" style={{ y }}>
-        <img
-          src="/images/DJI_0404.jpg"
-          alt=""
+        <video
           className="h-[120%] w-full object-cover"
-          loading="eager"
-          fetchPriority="high"
-        />
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/DJI_0404.jpg"
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80" />
       </motion.div>
 
