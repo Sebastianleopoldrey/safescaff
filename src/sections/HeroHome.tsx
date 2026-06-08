@@ -5,6 +5,11 @@ import { ArrowRight, ArrowDown } from 'lucide-react'
 import { TextReveal } from '@/components/TextReveal'
 import { Prose } from '@/components/site/prose'
 
+const HERO_BODY =
+  '**STIB-medlem.** **20 000 kvm** material i lager.\n' +
+  'Svar på offertförfrågan **inom 24 timmar**.\n' +
+  'Vi reser **byggnadsställningar och väderskydd** i Göteborg som klarar både **stormarna** och **inspektörens checklista**.'
+
 export function HeroHome() {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollY } = useScroll()
@@ -12,94 +17,109 @@ export function HeroHome() {
   const opacity = useTransform(scrollY, [0, 600], [1, 0])
 
   return (
-    <section
-      ref={ref}
-      data-hero
-      className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-brand-black text-brand-white"
-    >
-      <motion.div className="absolute inset-0" style={{ y }}>
-        <video
-          className="h-[120%] w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/images/DJI_0404.jpg"
-        >
-          <source src="/videos/hero.mp4" type="video/mp4" />
-        </video>
-        {/* Lighter scrim on mobile so the video stays visible; full gradient on desktop. */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/20 to-black/65 md:from-black/60 md:via-black/30 md:to-black/80" />
-      </motion.div>
-
-      <motion.div
-        className="container-edge relative z-10 flex h-full flex-col items-center justify-center pb-0 text-center md:items-stretch md:justify-end md:pb-32 md:text-left"
-        style={{ opacity }}
+    // data-hero wraps both the video and the mobile dark intro so the header
+    // stays transparent over the whole hero block, then turns solid after it.
+    <div data-hero>
+      <section
+        ref={ref}
+        className="relative h-[62svh] min-h-[460px] w-full overflow-hidden bg-brand-black text-brand-white md:h-[100svh] md:min-h-[640px]"
       >
-        <motion.span
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="label-mono mb-6 block text-brand-green-light"
-        >
-          Göteborg · STIB-medlem sedan 2024
-        </motion.span>
-
-        <TextReveal
-          text="Vi bygger säkra ställningar"
-          as="h1"
-          className="heading-hero text-brand-white"
-          delay={0.4}
-          stagger={0.08}
-        />
+        <motion.div className="absolute inset-0" style={{ y }}>
+          <video
+            className="h-[120%] w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/images/DJI_0404.jpg"
+          >
+            <source src="/videos/hero.mp4" type="video/mp4" />
+          </video>
+          {/* Lighter scrim on mobile so the video stays prominent; full gradient on desktop. */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/60 md:from-black/60 md:via-black/30 md:to-black/80" />
+        </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
-          className="mt-8 hidden md:block"
+          className="container-edge relative z-10 flex h-full flex-col items-center justify-center pb-0 text-center md:items-stretch md:justify-end md:pb-32 md:text-left"
+          style={{ opacity }}
         >
-          <Prose
-            className="max-w-xl text-[18px] text-white/80"
-            text={
-              '**STIB-medlem.** **20 000 kvm** material i lager.\n' +
-              'Svar på offertförfrågan **inom 24 timmar**.\n' +
-              'Vi reser **byggnadsställningar och väderskydd** i Göteborg som klarar både **stormarna** och **inspektörens checklista**.'
-            }
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="label-mono mb-6 block text-brand-green-light"
+          >
+            Göteborg · STIB-medlem sedan 2024
+          </motion.span>
+
+          <TextReveal
+            text="Vi bygger säkra ställningar"
+            as="h1"
+            className="heading-hero text-brand-white"
+            delay={0.4}
+            stagger={0.08}
           />
+
+          {/* Body copy + CTAs sit in the hero overlay on desktop. On mobile they
+              move to the dark section below so the video stays clean (PROFESS-style). */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
+            className="mt-8 hidden md:block"
+          >
+            <Prose className="max-w-xl text-[18px] text-white/80" text={HERO_BODY} />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.6 }}
+            className="mt-10 hidden flex-wrap items-center gap-3 md:flex md:justify-start"
+          >
+            <Link to="/kontakt" className="btn-primary group">
+              Få offert inom 24h
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            </Link>
+            <a href="#tjanster" className="btn-ghost text-brand-white">
+              Se vad vi gör
+            </a>
+          </motion.div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.6 }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-3 md:justify-start"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.6 }}
+          transition={{ delay: 2, duration: 1 }}
+          className="absolute inset-x-0 bottom-8 z-10 hidden flex-col items-center text-brand-white md:flex"
         >
-          <Link to="/kontakt" className="btn-primary group">
-            Få offert inom 24h
-            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-          </Link>
-          <a href="#tjanster" className="btn-ghost text-brand-white">
-            Se vad vi gör
-          </a>
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            className="flex flex-col items-center gap-2"
+          >
+            <span className="label-mono text-[11px]">Scrolla</span>
+            <ArrowDown size={14} />
+          </motion.div>
         </motion.div>
-      </motion.div>
+      </section>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.6 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute inset-x-0 bottom-8 z-10 flex flex-col items-center text-brand-white"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-          className="flex flex-col items-center gap-2"
-        >
-          <span className="label-mono text-[11px]">Scrolla</span>
-          <ArrowDown size={14} />
-        </motion.div>
-      </motion.div>
-    </section>
+      {/* PROFESS-style dark intro — mobile only. Keeps the hero copy readable
+          below a clean, prominent video instead of crowding the video itself. */}
+      <section className="bg-brand-black py-14 text-center text-brand-white md:hidden">
+        <div className="container-edge">
+          <Prose className="mx-auto max-w-md text-[17px] leading-relaxed text-white/85" text={HERO_BODY} />
+          <div className="mt-8 flex flex-col gap-3">
+            <Link to="/kontakt" className="btn-primary group w-full justify-center">
+              Få offert inom 24h
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            </Link>
+            <a href="#tjanster" className="btn-ghost w-full justify-center text-brand-white">
+              Se vad vi gör
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
   )
 }
