@@ -1,5 +1,6 @@
 import { Reveal } from './Reveal'
 import { TextReveal } from './TextReveal'
+import { Prose } from './site/prose'
 
 export interface SegmentItem {
   label: string
@@ -30,7 +31,7 @@ export function WhoFor({ items, eyebrow = 'Vi bygger för', heading = 'De som li
                 <h3 className="font-display text-[20px] font-semibold tracking-tight text-brand-black">
                   {item.label}
                 </h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-brand-graphite">{item.body}</p>
+                <Prose className="mt-3 text-[15px] leading-relaxed text-brand-graphite" text={item.body} />
               </div>
             </Reveal>
           ))}

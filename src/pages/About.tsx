@@ -6,6 +6,7 @@ import { Reveal } from '@/components/Reveal'
 import { ImageReveal } from '@/components/ImageReveal'
 import { TeamGrid } from '@/components/TeamGrid'
 import { ContactCTA } from '@/sections/ContactCTA'
+import { Prose } from '@/components/site/prose'
 import { site } from '@/config/site'
 import { featureFlags } from '@/config/featureFlags'
 import { useDocumentMeta } from '@/hooks/useDocumentMeta'
@@ -14,22 +15,22 @@ const VALUES = [
   {
     icon: HardHat,
     label: 'Erfarna i alla led',
-    body: 'Lång erfarenhet av allt från villarenoveringar till stora kommersiella fastigheter och industri. Rätt utbildning och kompetens i varje moment — ställningen monteras korrekt, stabilt och säkert oavsett komplexitet.',
+    body: '**Lång erfarenhet** av allt från **villarenoveringar** till **stora kommersiella fastigheter och industri**.\n**Rätt utbildning och kompetens** i varje moment — ställningen monteras **korrekt, stabilt och säkert** oavsett komplexitet.',
   },
   {
     icon: Shield,
     label: 'Säkerhet i varje moment',
-    body: 'Säkerhet är kärnan i allt vi gör. Tydliga rutiner och noggranna kontroller innan ställningen tas i bruk skyddar både hantverkare och omgivning — och ger effektivare arbetsdagar.',
+    body: '**Säkerhet** är kärnan i allt vi gör.\n**Tydliga rutiner och noggranna kontroller** innan ställningen tas i bruk skyddar både **hantverkare och omgivning** — och ger **effektivare arbetsdagar**.',
   },
   {
     icon: Ruler,
     label: 'Skräddarsydda lösningar',
-    body: 'Alla projekt är unika. Vi utgår från byggnadens förutsättningar och dina önskemål och bygger en funktionell ställning som sparar både tid och kostnad.',
+    body: '**Alla projekt är unika**.\nVi utgår från **byggnadens förutsättningar** och **dina önskemål** och bygger en **funktionell ställning** som sparar både **tid och kostnad**.',
   },
   {
     icon: MapPin,
     label: 'Lokal närvaro',
-    body: 'Förankrade i Göteborg och Kungsbacka. Korta beslutsvägar, personlig service och snabb respons — vi är stolta över vårt rykte och strävar alltid efter att överträffa förväntningarna.',
+    body: 'Förankrade i **Göteborg och Kungsbacka**.\n**Korta beslutsvägar, personlig service och snabb respons** — vi är stolta över vårt rykte och strävar alltid efter att **överträffa förväntningarna**.',
   },
 ]
 
@@ -45,7 +46,7 @@ export function About() {
 
   return (
     <>
-      <section className="relative h-[88svh] min-h-[560px] overflow-hidden bg-brand-black text-brand-white">
+      <section data-hero className="relative h-[88svh] min-h-[560px] overflow-hidden bg-brand-black text-brand-white">
         <motion.div className="absolute inset-0" style={{ y }}>
           <img src="/images/DJI_0404.jpg" alt="" className="h-[120%] w-full object-cover opacity-70" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80" />
@@ -76,22 +77,27 @@ export function About() {
             />
             <Reveal delay={0.2} y={30}>
               <div className="mt-8 space-y-6 text-[17px] leading-relaxed text-brand-graphite">
-                <p>
-                  SafeScaff grundades 2017 i Göteborg. Sedan dess har vi vuxit till ett lager på cirka
-                  20 000 kvm ställning — tillräckligt för att klara projekt i alla storlekar, från
-                  villarenoveringen på gatan till fasad- och industriuppdrag åt kommersiella fastigheter.
-                  Varje jobb är lika viktigt för oss, stort som smått.
-                </p>
-                <p>
-                  Vårt ledord är safety first. När du hyr en ställning av oss ska du kunna lita på att den är
-                  rätt monterad, stabil och säker — varje gång. Vi finns med från projektets första dag till
-                  sista, och genom tydlig kommunikation anpassar vi ställningen efter just dina behov.
-                </p>
-                <p className="text-brand-black">
-                  Vi bygger med Layher: modul allround för speciallösningar och Speedyscaff i aluminium för de
-                  enklare jobben. Det ger oss flexibiliteten att lösa både komplexa konstruktioner och snabba
-                  uppdrag med samma höga kvalitet.
-                </p>
+                <Prose
+                  text={
+                    'SafeScaff **grundades 2017** i Göteborg.\n' +
+                    'Sedan dess har vi vuxit till ett lager på **cirka 20 000 kvm ställning** — tillräckligt för att klara **projekt i alla storlekar**, från villarenoveringen på gatan till fasad- och industriuppdrag åt kommersiella fastigheter.\n' +
+                    'Varje jobb är **lika viktigt** för oss, **stort som smått**.'
+                  }
+                />
+                <Prose
+                  text={
+                    'Vårt ledord är **safety first**.\n' +
+                    'När du hyr en ställning av oss ska du kunna lita på att den är **rätt monterad, stabil och säker** — varje gång.\n' +
+                    'Vi finns med från **projektets första dag till sista**, och genom **tydlig kommunikation** anpassar vi ställningen efter just dina behov.'
+                  }
+                />
+                <Prose
+                  className="text-brand-black"
+                  text={
+                    'Vi bygger med **Layher**: **modul allround** för speciallösningar och **Speedyscaff i aluminium** för de enklare jobben.\n' +
+                    'Det ger oss **flexibiliteten** att lösa både **komplexa konstruktioner** och **snabba uppdrag** med samma höga kvalitet.'
+                  }
+                />
               </div>
             </Reveal>
           </div>
@@ -102,7 +108,11 @@ export function About() {
         members={site.team}
         eyebrow="Vårt team"
         heading="Två som svarar i telefon."
-        intro="Hos oss pratar du direkt med den som planerar ditt jobb — och med den som är ute på arbetsplatsen. Inga växlar, inga lead-formulär, inga säljare. Bara två personer som tar ansvar."
+        intro={
+          'Hos oss pratar du direkt med **den som planerar ditt jobb** — och med **den som är ute på arbetsplatsen**.\n' +
+          '**Inga växlar, inga lead-formulär, inga säljare**.\n' +
+          'Bara **två personer som tar ansvar**.'
+        }
       />
 
       <section className="bg-brand-white py-24 md:py-32">
@@ -113,12 +123,13 @@ export function About() {
             </Reveal>
             <TextReveal text="Varför välja oss" as="h2" className="heading-section mt-6 text-brand-black" />
             <Reveal delay={0.2} y={30}>
-              <p className="mt-8 text-[17px] leading-relaxed text-brand-graphite">
-                När du anlitar SafeScaff får du mer än en leverantör av byggnadsställningar — du får en partner
-                som tar ansvar för hela processen, från transport och montering till säkerhetskontroll och
-                demontering. Vi arbetar alltid enligt gällande regler och branschstandard, med punktlighet och
-                yrkesstolthet, så att ditt projekt flyter på utan onödiga avbrott.
-              </p>
+              <Prose
+                className="mt-8 text-[17px] leading-relaxed text-brand-graphite"
+                text={
+                  'När du anlitar SafeScaff får du **mer än en leverantör** av byggnadsställningar — du får en **partner som tar ansvar för hela processen**, från transport och montering till säkerhetskontroll och demontering.\n' +
+                  'Vi arbetar alltid enligt **gällande regler och branschstandard**, med **punktlighet och yrkesstolthet**, så att ditt projekt **flyter på utan onödiga avbrott**.'
+                }
+              />
             </Reveal>
           </div>
           <ul className="grid gap-px border border-brand-gray-light bg-brand-gray-light md:grid-cols-2">
@@ -129,7 +140,7 @@ export function About() {
                   <h3 className="mt-8 font-display text-2xl font-semibold tracking-tight text-brand-black">
                     {v.label}
                   </h3>
-                  <p className="mt-4 text-[15px] text-brand-graphite">{v.body}</p>
+                  <Prose className="mt-4 text-[15px] text-brand-graphite" text={v.body} />
                 </li>
               </Reveal>
             ))}
@@ -155,12 +166,14 @@ export function About() {
               className="heading-section mt-6 text-brand-black"
             />
             <Reveal delay={0.2} y={30}>
-              <p className="mt-8 max-w-xl text-[17px] leading-relaxed text-brand-graphite">
-                STIB är branschorganisationen för Sveriges seriösa ställningsentreprenörer. Medlemskapet kräver
-                STIB-utbildade montörer, dokumenterad kvalitetskontroll, och att vi följer Arbetsmiljöverkets
-                föreskrifter (AFS 2013:4) — och att vi blir granskade när vi inte räknar med det. För dig som
-                beställer betyder det en sak: ställningen är byggd rätt, varje gång.
-              </p>
+              <Prose
+                className="mt-8 max-w-xl text-[17px] leading-relaxed text-brand-graphite"
+                text={
+                  'STIB är **branschorganisationen** för Sveriges seriösa ställningsentreprenörer.\n' +
+                  'Medlemskapet kräver **STIB-utbildade montörer**, **dokumenterad kvalitetskontroll**, och att vi följer **Arbetsmiljöverkets föreskrifter (AFS 2013:4)** — och att vi blir **granskade när vi inte räknar med det**.\n' +
+                  'För dig som beställer betyder det en sak: **ställningen är byggd rätt, varje gång**.'
+                }
+              />
             </Reveal>
             <Reveal delay={0.3} y={20}>
               <Link

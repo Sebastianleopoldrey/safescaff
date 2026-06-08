@@ -7,6 +7,7 @@ import { Phone, Mail, MapPin, ArrowRight, Loader2, CheckCircle2 } from 'lucide-r
 import { TextReveal } from '@/components/TextReveal'
 import { Reveal } from '@/components/Reveal'
 import { ImageReveal } from '@/components/ImageReveal'
+import { Prose } from '@/components/site/prose'
 import { site } from '@/config/site'
 import { cn } from '@/lib/cn'
 
@@ -52,7 +53,7 @@ export function Contact() {
 
   return (
     <>
-      <section className="bg-brand-black pt-40 pb-20 text-brand-white md:pt-48 md:pb-28">
+      <section data-hero className="bg-brand-black pt-40 pb-20 text-brand-white md:pt-48 md:pb-28">
         <div className="container-edge">
           <motion.span
             initial={{ opacity: 0 }}
@@ -64,9 +65,13 @@ export function Contact() {
           </motion.span>
           <TextReveal text="Hör av dig." as="h1" className="heading-hero text-brand-white" />
           <Reveal delay={0.4}>
-            <p className="mt-8 max-w-xl text-[18px] text-white/80">
-              Vi återkommer inom 24 timmar på vardagar. Akut? Ring direkt på {site.phone}.
-            </p>
+            <Prose
+              className="mt-8 max-w-xl text-[18px] text-white/80"
+              text={
+                'Vi återkommer **inom 24 timmar** på vardagar.\n' +
+                '**Akut?** Ring direkt på **' + site.phone + '**.'
+              }
+            />
           </Reveal>
         </div>
       </section>
@@ -103,14 +108,20 @@ export function Contact() {
             </Reveal>
             <TextReveal text="Berätta om projektet." as="h2" className="heading-section mt-6 text-brand-black" />
             <Reveal delay={0.2} y={30}>
-              <p className="mt-8 max-w-md text-[17px] text-brand-graphite">
-                Fyll i formuläret så återkommer vi inom 24 timmar med nästa steg.
-              </p>
+              <Prose
+                className="mt-8 max-w-md text-[17px] text-brand-graphite"
+                text="Fyll i **formuläret** så återkommer vi **inom 24 timmar** med **nästa steg**."
+              />
             </Reveal>
             <Reveal delay={0.3} y={30}>
-              <p className="mt-6 max-w-md text-[17px] text-brand-graphite">
-                Intresserad? Kontakta oss. Hör gärna av dig till oss vid frågor eller om du önskar offert!
-              </p>
+              <Prose
+                className="mt-6 max-w-md text-[17px] text-brand-graphite"
+                text={
+                  '**Intresserad?**\n' +
+                  '**Kontakta oss.**\n' +
+                  'Hör gärna av dig till oss vid **frågor** eller om du önskar **offert**!'
+                }
+              />
             </Reveal>
 
             <div className="mt-12 space-y-4 text-[15px] text-brand-graphite">

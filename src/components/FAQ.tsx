@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Plus } from 'lucide-react'
 import { Reveal } from './Reveal'
 import { TextReveal } from './TextReveal'
+import { Prose } from './site/prose'
 import { cn } from '@/lib/cn'
 
 export interface FAQItem {
@@ -62,9 +63,10 @@ export function FAQ({ items, eyebrow = 'Vanliga frågor', heading = 'Det du undr
                         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                         className="overflow-hidden"
                       >
-                        <p className="max-w-2xl pb-8 text-[16px] leading-relaxed text-brand-graphite">
-                          {item.a}
-                        </p>
+                        <Prose
+                          className="max-w-2xl pb-8 text-[16px] leading-relaxed text-brand-graphite"
+                          text={item.a}
+                        />
                       </motion.div>
                     )}
                   </AnimatePresence>

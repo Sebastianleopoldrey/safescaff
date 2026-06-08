@@ -4,13 +4,14 @@ import { Reveal } from '@/components/Reveal'
 import { ImageReveal } from '@/components/ImageReveal'
 import { CaseStudy, type CaseStudyData } from '@/components/CaseStudy'
 import { ContactCTA } from '@/sections/ContactCTA'
+import { Prose } from '@/components/site/prose'
 import { featureFlags } from '@/config/featureFlags'
 
 const OSTRA_SJUKHUSET: CaseStudyData = {
   number: '01 · Featured',
   title: 'Östra Sjukhuset.',
   subtitle:
-    'Storskaligt Keder XL-väderskydd över ett aktivt sjukhus. Två stormar. Noll avbrott i sjukvården. Klart i tid.',
+    '**Storskaligt Keder XL-väderskydd** över ett **aktivt sjukhus**.\nTvå **stormar**.\n**Noll avbrott** i sjukvården.\n**Klart i tid**.',
   location: 'Göteborg',
   year: '2024',
   heroImage: '/images/ostra-sjukhuset.jpg',
@@ -21,11 +22,11 @@ const OSTRA_SJUKHUSET: CaseStudyData = {
     { label: 'Stormar', value: '2 st' },
   ],
   challenge:
-    'Fasadrenovering på ett aktivt sjukhus där akutmottagning, ambulansintag och patienttransporter rullar dygnet runt. Arbetet skulle utföras under hösten och vintern, vilket gjorde regn, vind och temperatur till lika stora hot mot tidplanen som själva entreprenaden. Konsekvensen av en kollapsad ställning är inte bara försenad bygglov — det är inställd vård.',
+    'Fasadrenovering på ett **aktivt sjukhus** där **akutmottagning, ambulansintag och patienttransporter** rullar dygnet runt.\nArbetet skulle utföras under **hösten och vintern**, vilket gjorde **regn, vind och temperatur** till lika stora hot mot tidplanen som själva entreprenaden.\nKonsekvensen av en kollapsad ställning är inte bara försenad bygglov — det är **inställd vård**.',
   solution:
-    'Vi valde Keder XL — Layhers förstärkta väderskyddssystem med kederprofiler och förankringspunkter dimensionerade för upp till 25 m/s vindlast. Hela ställningen reses i etapper, koordinerade vecka för vecka med sjukhusets driftavdelning så att ambulansvägar, helikopterplatta och brandkåren aldrig blockerades. Varje etapp dokumenterades med hållfasthetsberäkning, lastfall och fotodokumentation före överlämning. Två gånger om dagen — kontroll på ankarpunkter och kederinfästningar.',
+    'Vi valde **Keder XL** — Layhers förstärkta väderskyddssystem med **kederprofiler och förankringspunkter** dimensionerade för upp till **25 m/s vindlast**.\nHela ställningen reses i **etapper**, koordinerade **vecka för vecka** med sjukhusets driftavdelning så att **ambulansvägar, helikopterplatta och brandkåren** aldrig blockerades.\nVarje etapp dokumenterades med **hållfasthetsberäkning, lastfall och fotodokumentation** före överlämning.\n**Två gånger om dagen** — kontroll på **ankarpunkter och kederinfästningar**.',
   result:
-    'Ställningen stod kvar genom två kraftiga stormar utan en enda incident. Inga inställda operationer. Inga försenade arbetsdagar för entreprenören som arbetade under skyddet. Sjukhusets driftchef bad oss komma tillbaka — och rekommenderade oss vidare till två systerprojekt inom Västra Götalandsregionen. Det säger något om vad seriös ställningsbyggnation faktiskt levererar.',
+    'Ställningen stod kvar genom **två kraftiga stormar** utan **en enda incident**.\n**Inga inställda operationer**.\nInga försenade arbetsdagar för entreprenören som arbetade under skyddet.\nSjukhusets driftchef bad oss **komma tillbaka** — och rekommenderade oss vidare till **två systerprojekt** inom Västra Götalandsregionen.\nDet säger något om vad **seriös ställningsbyggnation** faktiskt levererar.',
   quote: {
     text: 'Storleken på den här ställningen är inte det imponerande. Det imponerande är att den klarade två stormar utan att vi behövde åka ut och korrigera något. Det är vad åtta års disciplin gör.',
     attribution: 'Patrik Spahiu, VD SafeScaff',
@@ -51,7 +52,7 @@ const PLACEHOLDERS: ProjectPlaceholder[] = [
     number: '02',
     title: 'BRF-fasad i Majorna',
     scope: 'Fasadrenovering · 1 800 m² · 8 veckor',
-    body: 'Modulställning runt en fyra-vånings BRF i centrala Göteborg, med skyddsnät och tunnelbygge för boendepassage. Boende kunde gå in och ut hela byggtiden — utan att fasadarbetet stannade en enda dag.',
+    body: '**Modulställning** runt en **fyra-vånings BRF** i centrala Göteborg, med **skyddsnät och tunnelbygge** för boendepassage.\n**Boende kunde gå in och ut** hela byggtiden — utan att fasadarbetet **stannade en enda dag**.',
     image: '/images/byggstallning-safescaff-2100x800.jpg',
     status: featureFlags.showProjectCases ? 'live' : 'soon',
   },
@@ -59,7 +60,7 @@ const PLACEHOLDERS: ProjectPlaceholder[] = [
     number: '03',
     title: 'Industribyggnad i Sävenäs',
     scope: 'Fasad + tak · 2 400 m² · Modul allround',
-    body: 'Storskaligt montage på industribyggnad där produktionen aldrig kunde stoppas. Vi byggde i etapper, nattetid där det krävdes, och höll all logistik utanför produktionsflödet.',
+    body: '**Storskaligt montage** på industribyggnad där **produktionen aldrig kunde stoppas**.\nVi byggde i **etapper, nattetid** där det krävdes, och höll **all logistik utanför produktionsflödet**.',
     image: '/images/IMG_1116-scaled.jpg',
     status: featureFlags.showProjectCases ? 'live' : 'soon',
   },
@@ -67,7 +68,7 @@ const PLACEHOLDERS: ProjectPlaceholder[] = [
     number: '04',
     title: 'Villarenovering i Kungsbacka',
     scope: 'Fasad + tak · Speedyscaff · 3 veckor',
-    body: 'Aluminiumställning på en villatomt med begränsad åtkomst. Snabb resning, noll skador på trädgården, demontering på en dag när målaren var klar.',
+    body: '**Aluminiumställning** på en villatomt med **begränsad åtkomst**.\n**Snabb resning**, **noll skador på trädgården**, demontering på **en dag** när målaren var klar.',
     image: '/images/IMG_1457.jpg',
     status: featureFlags.showProjectCases ? 'live' : 'soon',
   },
@@ -79,7 +80,7 @@ export function Projects() {
 
   return (
     <>
-      <section className="relative h-[78svh] min-h-[520px] overflow-hidden bg-brand-black text-brand-white">
+      <section data-hero className="relative h-[78svh] min-h-[520px] overflow-hidden bg-brand-black text-brand-white">
         <motion.div className="absolute inset-0" style={{ y }}>
           <img
             src="/images/byggstallning-safescaff-2100x800.jpg"
@@ -94,11 +95,14 @@ export function Projects() {
           </Reveal>
           <TextReveal text="Det vi byggt." as="h1" className="heading-hero text-brand-white" />
           <Reveal delay={0.3}>
-            <p className="mt-8 max-w-xl text-[18px] text-white/80">
-              Sjukhusprojekt, BRF-fasader, villor i Kungsbacka, industribyggnader i Sävenäs. Storskaliga väderskydd
-              och snabba aluminium-rensningar. Det enda som binder ihop dem är att de står rätt — och att de
-              levererades i tid.
-            </p>
+            <Prose
+              className="mt-8 max-w-xl text-[18px] text-white/80"
+              text={
+                '**Sjukhusprojekt, BRF-fasader, villor i Kungsbacka, industribyggnader i Sävenäs**.\n' +
+                '**Storskaliga väderskydd** och **snabba aluminium-rensningar**.\n' +
+                'Det enda som binder ihop dem är att de **står rätt** — och att de **levererades i tid**.'
+              }
+            />
           </Reveal>
         </div>
       </section>
@@ -117,10 +121,13 @@ export function Projects() {
               className="heading-section mt-6 text-brand-black"
             />
             <Reveal delay={0.15}>
-              <p className="mt-6 max-w-xl text-[17px] text-brand-graphite">
-                Vi väntar in fotograf och godkännanden från beställarna. Här är scope och resultat —
-                bildgalleriet kommer.
-              </p>
+              <Prose
+                className="mt-6 max-w-xl text-[17px] text-brand-graphite"
+                text={
+                  'Vi väntar in **fotograf och godkännanden** från beställarna.\n' +
+                  'Här är **scope och resultat** — **bildgalleriet kommer**.'
+                }
+              />
             </Reveal>
           </div>
 
@@ -141,7 +148,7 @@ export function Projects() {
                   </Reveal>
                   <TextReveal text={p.title} as="h3" className="heading-section mt-6 text-brand-black" />
                   <Reveal delay={0.2} y={30}>
-                    <p className="mt-8 max-w-md text-[17px] leading-relaxed text-brand-graphite">{p.body}</p>
+                    <Prose className="mt-8 max-w-md text-[17px] leading-relaxed text-brand-graphite" text={p.body} />
                   </Reveal>
                   {p.status === 'soon' && (
                     <Reveal delay={0.3}>

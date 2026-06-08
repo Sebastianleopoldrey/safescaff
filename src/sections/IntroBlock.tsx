@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react'
 import { Reveal } from '@/components/Reveal'
 import { TextReveal } from '@/components/TextReveal'
 import { ImageReveal } from '@/components/ImageReveal'
+import { Prose } from '@/components/site/prose'
 
 const STATS = ['8 ÅR', '20 000 KVM', 'STIB SEDAN 2024', 'GÖTEBORG']
 
@@ -20,12 +21,14 @@ export function IntroBlock() {
             className="heading-section mt-6 text-brand-black"
           />
           <Reveal delay={0.15} y={30}>
-            <p className="mt-8 max-w-xl text-[18px] text-brand-graphite">
-              Vi utför montering och demontering samt uthyrning av byggnadsställningar och väderskydd.
-              Våra ambitioner är säkerhet, god service och kvalitet vilket leder till en nöjd kund.
-              Hyr du ställningar utav oss ordnar vi allt med transport, montering/demontering och vi
-              ser framörallt till att du har en säker och trygg arbetsplats att jobba ifrån.
-            </p>
+            <Prose
+              className="mt-8 max-w-xl text-[18px] text-brand-graphite"
+              text={
+                'Vi utför **montering och demontering** samt **uthyrning** av byggnadsställningar och väderskydd.\n' +
+                'Våra ambitioner är **säkerhet, god service och kvalitet** vilket leder till en nöjd kund.\n' +
+                'Hyr du ställningar utav oss ordnar vi **allt med transport, montering/demontering** och vi ser framörallt till att du har en **säker och trygg arbetsplats** att jobba ifrån.'
+              }
+            />
           </Reveal>
 
           <Reveal delay={0.25} y={30}>

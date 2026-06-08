@@ -2,6 +2,7 @@ import { Mail, Phone } from 'lucide-react'
 import { Reveal } from './Reveal'
 import { TextReveal } from './TextReveal'
 import { ImageReveal } from './ImageReveal'
+import { Prose } from './site/prose'
 
 interface TeamMember {
   name: string
@@ -36,7 +37,7 @@ export function TeamGrid({
             </Reveal>
             <TextReveal text={heading} as="h2" className="heading-section mt-6 text-brand-black" />
             <Reveal delay={0.15} y={30}>
-              <p className="mt-8 max-w-md text-[18px] text-brand-graphite">{intro}</p>
+              <Prose className="mt-8 max-w-md text-[18px] text-brand-graphite" text={intro} />
             </Reveal>
           </div>
         </div>
@@ -57,7 +58,7 @@ export function TeamGrid({
                   </h3>
                   <span className="label-mono mt-2 block text-brand-green">{m.role}</span>
                   {m.bio && (
-                    <p className="mt-4 max-w-md text-[15px] leading-relaxed text-brand-graphite">{m.bio}</p>
+                    <Prose className="mt-4 max-w-md text-[15px] leading-relaxed text-brand-graphite" text={m.bio} />
                   )}
                   <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-[14px]">
                     <a

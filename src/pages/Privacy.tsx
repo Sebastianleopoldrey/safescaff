@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { TextReveal } from '@/components/TextReveal'
 import { Reveal } from '@/components/Reveal'
+import { Prose } from '@/components/site/prose'
 
 export function Privacy() {
   return (
@@ -28,49 +29,66 @@ export function Privacy() {
           <Reveal delay={0.05}>
             <div>
               <h2 className="font-display text-2xl font-semibold text-brand-black">Personuppgiftsansvarig</h2>
-              <p className="mt-3">
-                SafeScaff Göteborg AB (org.nr 559116-5435) är personuppgiftsansvarig för behandlingen av dina personuppgifter.
-                Kontakta oss på info@safescaff.se eller 031-82 82 84 vid frågor.
-              </p>
+              <Prose
+                className="mt-3"
+                text={
+                  '**SafeScaff Göteborg AB** (org.nr 559116-5435) är **personuppgiftsansvarig** för behandlingen av dina personuppgifter.\n' +
+                  'Kontakta oss på **info@safescaff.se** eller **031-82 82 84** vid frågor.'
+                }
+              />
             </div>
           </Reveal>
 
           <Reveal delay={0.05}>
             <div>
               <h2 className="font-display text-2xl font-semibold text-brand-black">Vilka uppgifter vi samlar in</h2>
-              <p className="mt-3">
-                När du fyller i kontaktformuläret samlar vi in namn, e-post, telefonnummer och de uppgifter du själv anger
-                om ditt projekt. Detta sker enbart med ditt samtycke och endast i syfte att besvara din förfrågan.
-              </p>
+              <Prose
+                className="mt-3"
+                text={
+                  'När du fyller i kontaktformuläret samlar vi in **namn, e-post, telefonnummer** och de uppgifter du själv anger om ditt projekt.\n' +
+                  'Detta sker enbart med **ditt samtycke** och endast i syfte att **besvara din förfrågan**.'
+                }
+              />
             </div>
           </Reveal>
 
           <Reveal delay={0.05}>
             <div>
               <h2 className="font-display text-2xl font-semibold text-brand-black">Hur länge sparas uppgifterna</h2>
-              <p className="mt-3">
-                Vi sparar dina personuppgifter så länge det är nödvändigt för att hantera din förfrågan eller fullgöra ett
-                avtalsförhållande. Därefter raderas de eller anonymiseras. Faktureringsdata sparas enligt bokföringslagens krav.
-              </p>
+              <Prose
+                className="mt-3"
+                text={
+                  'Vi sparar dina personuppgifter **så länge det är nödvändigt** för att hantera din förfrågan eller fullgöra ett avtalsförhållande.\n' +
+                  'Därefter **raderas de eller anonymiseras**.\n' +
+                  '**Faktureringsdata** sparas enligt **bokföringslagens krav**.'
+                }
+              />
             </div>
           </Reveal>
 
           <Reveal delay={0.05}>
             <div>
               <h2 className="font-display text-2xl font-semibold text-brand-black">Dina rättigheter</h2>
-              <p className="mt-3">
-                Du har rätt att begära ut, rätta eller radera dina personuppgifter, samt invända mot eller begränsa behandlingen.
-                Du har även rätt att lämna klagomål till Integritetsskyddsmyndigheten (IMY).
-              </p>
+              <Prose
+                className="mt-3"
+                text={
+                  'Du har rätt att **begära ut, rätta eller radera** dina personuppgifter, samt **invända mot eller begränsa** behandlingen.\n' +
+                  'Du har även rätt att lämna **klagomål till Integritetsskyddsmyndigheten (IMY)**.'
+                }
+              />
             </div>
           </Reveal>
 
           <Reveal delay={0.05}>
             <div>
               <h2 className="font-display text-2xl font-semibold text-brand-black">Cookies</h2>
-              <p className="mt-3">
-                Sajten använder endast cookies som är nödvändiga för funktionalitet. Inga spårningscookies sätts utan ditt samtycke.
-              </p>
+              <Prose
+                className="mt-3"
+                text={
+                  'Sajten använder endast cookies som är **nödvändiga för funktionalitet**.\n' +
+                  '**Inga spårningscookies** sätts utan **ditt samtycke**.'
+                }
+              />
             </div>
           </Reveal>
         </div>

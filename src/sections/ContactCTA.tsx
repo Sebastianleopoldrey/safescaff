@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Phone } from 'lucide-react'
 import { TextReveal } from '@/components/TextReveal'
 import { Reveal } from '@/components/Reveal'
+import { Prose } from '@/components/site/prose'
 import { site } from '@/config/site'
 
 const TRUST = ['STIB-medlem sedan 2024', '8 år', '20 000 kvm', 'Östra Sjukhuset', '24h svar']
@@ -20,10 +21,13 @@ export function ContactCTA() {
           stagger={0.06}
         />
         <Reveal delay={0.2} y={30}>
-          <p className="mx-auto mt-8 max-w-xl text-[17px] text-brand-gray">
-            Skicka en förfrågan eller ring direkt. Du får svar inom 24 timmar — eller samma dag om du
-            ringer Patrik.
-          </p>
+          <Prose
+            className="mx-auto mt-8 max-w-xl text-[17px] text-brand-gray"
+            text={
+              'Skicka en **förfrågan** eller **ring direkt**.\n' +
+              'Du får svar **inom 24 timmar** — eller **samma dag** om du ringer **Patrik**.'
+            }
+          />
         </Reveal>
         <Reveal delay={0.3} y={20}>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-3">

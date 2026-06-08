@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react'
 import { Reveal } from '@/components/Reveal'
 import { TextReveal } from '@/components/TextReveal'
+import { Prose } from '@/components/site/prose'
 import { featureFlags } from '@/config/featureFlags'
 
 interface Project {
@@ -21,7 +22,7 @@ const PROJECTS: Project[] = [
     number: '01 · 04',
     title: 'Östra Sjukhuset',
     scope: 'Keder XL · ~3 200 m² · 14 v',
-    body: 'Storskaligt väderskydd över ett aktivt sjukhus. Höll genom två stormar. Noll avbrott i sjukvården. Klart i tid.',
+    body: '**Storskaligt väderskydd** över ett **aktivt sjukhus**.\nHöll genom **två stormar**.\n**Noll avbrott** i sjukvården.\n**Klart i tid**.',
     image: '/images/ostra-sjukhuset.jpg',
     href: '/projekt',
     status: featureFlags.ostraSjukhusetCase ? 'live' : 'soon',
@@ -30,7 +31,7 @@ const PROJECTS: Project[] = [
     number: '02 · 04',
     title: 'BRF-fasad i Majorna',
     scope: 'Modul allround · 1 800 m²',
-    body: 'Fasadrenovering med boendepassage genom hela byggtiden — utan att fasadarbetet stannade en dag.',
+    body: '**Fasadrenovering** med **boendepassage** genom hela byggtiden — utan att fasadarbetet **stannade en dag**.',
     image: '/images/byggstallning-safescaff-2100x800.jpg',
     status: featureFlags.showProjectCases ? 'live' : 'soon',
   },
@@ -38,7 +39,7 @@ const PROJECTS: Project[] = [
     number: '03 · 04',
     title: 'Industri i Sävenäs',
     scope: 'Fasad + tak · 2 400 m²',
-    body: 'Storskaligt montage där produktionen aldrig kunde stoppas. Vi byggde i etapper, nattetid där det krävdes.',
+    body: '**Storskaligt montage** där **produktionen aldrig kunde stoppas**.\nVi byggde i **etapper**, **nattetid** där det krävdes.',
     image: '/images/IMG_1116-scaled.jpg',
     status: featureFlags.showProjectCases ? 'live' : 'soon',
   },
@@ -46,7 +47,7 @@ const PROJECTS: Project[] = [
     number: '04 · 04',
     title: 'Villa i Kungsbacka',
     scope: 'Speedyscaff · 3 v',
-    body: 'Aluminiumställning på begränsad tomt. Snabb resning, noll skador i trädgården, demontering på en dag.',
+    body: '**Aluminiumställning** på **begränsad tomt**.\n**Snabb resning**, **noll skador i trädgården**, demontering på **en dag**.',
     image: '/images/IMG_1457.jpg',
     status: featureFlags.showProjectCases ? 'live' : 'soon',
   },
@@ -133,7 +134,7 @@ export function ProjectCarousel() {
               <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight text-brand-black transition-colors group-hover:text-brand-green md:text-3xl">
                 {p.title}
               </h3>
-              <p className="mt-3 max-w-md text-[15px] text-brand-graphite">{p.body}</p>
+              <Prose className="mt-3 max-w-md text-[15px] text-brand-graphite" text={p.body} />
             </motion.article>
           )
 

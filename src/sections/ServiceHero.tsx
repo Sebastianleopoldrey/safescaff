@@ -14,7 +14,7 @@ export function ServiceHero({ number, title, tagline, image, imageAlt }: Service
   const y = useTransform(scrollY, [0, 600], [0, 180])
 
   return (
-    <section className="relative h-[88svh] min-h-[560px] w-full overflow-hidden bg-brand-black text-brand-white">
+    <section data-hero className="relative h-[88svh] min-h-[560px] w-full overflow-hidden bg-brand-black text-brand-white">
       <motion.div className="absolute inset-0" style={{ y }}>
         <img src={image} alt={imageAlt} className="h-[120%] w-full object-cover" loading="eager" fetchPriority="high" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />

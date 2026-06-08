@@ -2,27 +2,28 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Ruler, Layers, CalendarRange, Truck } from 'lucide-react'
 import { Reveal } from '@/components/Reveal'
 import { TextReveal } from '@/components/TextReveal'
+import { Prose } from '@/components/site/prose'
 
 const FACTORS = [
   {
     icon: Ruler,
     label: 'Storlek & höjd',
-    body: 'Antal kvadratmeter, fasadhöjd och våningar. Större projekt får lägre pris per m².',
+    body: 'Antal **kvadratmeter, fasadhöjd och våningar**.\n**Större projekt** får **lägre pris per m²**.',
   },
   {
     icon: Layers,
     label: 'System',
-    body: 'Speedyscaff aluminium är billigare än Layher Allround modul. Vi väljer efter ditt jobb, inte efter vårt lager.',
+    body: '**Speedyscaff aluminium** är billigare än **Layher Allround modul**.\nVi väljer efter **ditt jobb**, inte efter **vårt lager**.',
   },
   {
     icon: CalendarRange,
     label: 'Hyrestid',
-    body: 'Längre hyresperioder ger lägre veckopris. Två veckor kostar inte dubbelt så mycket som en.',
+    body: '**Längre hyresperioder** ger **lägre veckopris**.\nTvå veckor kostar **inte dubbelt** så mycket som en.',
   },
   {
     icon: Truck,
     label: 'Plats & åtkomst',
-    body: 'Centrala Göteborg med trottoartillstånd kostar mer än en villa i Lindome. Vi sköter ansökningar.',
+    body: '**Centrala Göteborg** med **trottoartillstånd** kostar mer än en **villa i Lindome**.\nVi sköter **ansökningar**.',
   },
 ]
 
@@ -48,11 +49,14 @@ export function PricingTransparency() {
               className="heading-section mt-6 text-brand-black"
             />
             <Reveal delay={0.15}>
-              <p className="mt-8 max-w-md text-[17px] leading-relaxed text-brand-graphite">
-                Vi publicerar inga listpriser eftersom varje projekt är unikt. Men vi
-                hymlar inte heller — efter ett platsbesök får du en fast offert. Det här
-                påverkar priset:
-              </p>
+              <Prose
+                className="mt-8 max-w-md text-[17px] leading-relaxed text-brand-graphite"
+                text={
+                  'Vi publicerar **inga listpriser** eftersom **varje projekt är unikt**.\n' +
+                  'Men vi hymlar inte heller — efter ett **platsbesök** får du en **fast offert**.\n' +
+                  'Det här **påverkar priset**:'
+                }
+              />
             </Reveal>
             <Reveal delay={0.25}>
               <Link
@@ -75,7 +79,7 @@ export function PricingTransparency() {
                       <h3 className="mt-6 font-display text-[20px] font-semibold tracking-tight text-brand-black">
                         {f.label}
                       </h3>
-                      <p className="mt-3 text-[15px] leading-relaxed text-brand-graphite">{f.body}</p>
+                      <Prose className="mt-3 text-[15px] leading-relaxed text-brand-graphite" text={f.body} />
                     </div>
                   </Reveal>
                 </li>

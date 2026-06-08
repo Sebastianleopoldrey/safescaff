@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import { motion, type Variants } from 'framer-motion'
 import { cn } from '@/lib/cn'
 
@@ -50,11 +51,16 @@ export function TextReveal({
       viewport={{ once, amount: 0.4 }}
     >
       {words.map((w, i) => (
-        <span key={i} className="inline-block overflow-hidden align-bottom pr-[0.25em] pb-[0.15em] last:pr-0">
-          <motion.span variants={word} className="inline-block">
-            {w}
-          </motion.span>
-        </span>
+        <Fragment key={i}>
+          {/* Real space text node, kept OUTSIDE the overflow-hidden span so it
+              never gets clipped and words don't stick together. */}
+          {i > 0 && ' '}
+          <span className="inline-block overflow-hidden align-bottom pb-[0.15em]">
+            <motion.span variants={word} className="inline-block">
+              {w}
+            </motion.span>
+          </span>
+        </Fragment>
       ))}
     </Tag>
   )

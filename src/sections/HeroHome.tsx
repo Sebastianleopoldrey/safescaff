@@ -11,7 +11,11 @@ export function HeroHome() {
   const opacity = useTransform(scrollY, [0, 600], [1, 0])
 
   return (
-    <section ref={ref} className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-brand-black text-brand-white">
+    <section
+      ref={ref}
+      data-hero
+      className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-brand-black text-brand-white"
+    >
       <motion.div className="absolute inset-0" style={{ y }}>
         <video
           className="h-[120%] w-full object-cover"
@@ -23,11 +27,12 @@ export function HeroHome() {
         >
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80" />
+        {/* Lighter scrim on mobile so the video stays visible; full gradient on desktop. */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/20 to-black/65 md:from-black/60 md:via-black/30 md:to-black/80" />
       </motion.div>
 
       <motion.div
-        className="container-edge relative z-10 flex h-full flex-col justify-end pb-24 md:pb-32"
+        className="container-edge relative z-10 flex h-full flex-col items-center justify-center pb-0 text-center md:items-stretch md:justify-end md:pb-32 md:text-left"
         style={{ opacity }}
       >
         <motion.span
@@ -51,7 +56,7 @@ export function HeroHome() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.4 }}
-          className="mt-8 max-w-xl text-[18px] text-white/80"
+          className="mt-8 hidden max-w-xl text-[18px] text-white/80 md:block"
         >
           STIB-medlem. 20 000 kvm material i lager. Svar på offertförfrågan inom 24 timmar.
           Vi reser byggnadsställningar och väderskydd i Göteborg som klarar både stormarna
@@ -62,7 +67,7 @@ export function HeroHome() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.6 }}
-          className="mt-10 flex flex-wrap items-center gap-3"
+          className="mt-10 flex flex-wrap items-center justify-center gap-3 md:justify-start"
         >
           <Link to="/kontakt" className="btn-primary group">
             Få offert inom 24h

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import { Reveal } from '@/components/Reveal'
 import { TextReveal } from '@/components/TextReveal'
+import { Prose } from '@/components/site/prose'
 
 interface ServiceCard {
   number: string
@@ -18,9 +19,9 @@ const SERVICES: ServiceCard[] = [
     number: '01',
     title: 'Byggnadsställningar',
     simple:
-      'Vi bygger säkra plattformar runt hus så hantverkarna kan jobba i höjd utan att ramla.',
+      'Vi bygger **säkra plattformar** runt hus så hantverkarna kan **jobba i höjd utan att ramla**.',
     technical:
-      'Layher Allround modul för komplexa fasader, Speedyscaff aluminium för snabbare projekt. STIB-utbildade montörer, dokumentation enligt AFS 2013:4.',
+      '**Layher Allround modul** för komplexa fasader, **Speedyscaff aluminium** för snabbare projekt.\n**STIB-utbildade montörer**, dokumentation enligt **AFS 2013:4**.',
     image: '/images/IMG_6978.jpeg',
     alt: 'Byggnadsställning runt fasad',
     href: '/byggnadsstallningar',
@@ -29,9 +30,9 @@ const SERVICES: ServiceCard[] = [
     number: '02',
     title: 'Väderskydd',
     simple:
-      'Vi sätter upp ett tält över byggnaden så jobbet kan fortsätta i regn, snö och kyla — året runt.',
+      'Vi sätter upp **ett tält över byggnaden** så jobbet kan fortsätta i **regn, snö och kyla** — **året runt**.',
     technical:
-      'Layher Keder XL för spännvidder upp till 30 m. Stormsäker dimensionering enligt EN 12810. Bevisat på Östra Sjukhuset genom två stormar.',
+      '**Layher Keder XL** för spännvidder upp till **30 m**.\n**Stormsäker dimensionering** enligt **EN 12810**.\nBevisat på **Östra Sjukhuset** genom **två stormar**.',
     image: '/images/IMG_1483-scaled.jpg',
     alt: 'Storskaligt Keder XL-väderskydd',
     href: '/vaderskydd',
@@ -40,9 +41,9 @@ const SERVICES: ServiceCard[] = [
     number: '03',
     title: 'Skyltställ',
     simple:
-      'Vi sätter upp ramar för reklamskyltar så ditt budskap syns från långt håll.',
+      'Vi sätter upp **ramar för reklamskyltar** så ditt budskap **syns från långt håll**.',
     technical:
-      'Skyltkonstruktioner i alla format med UV-stabil tryck. Vi sköter polistillstånd och markupplåtelse. Tryck, montage och demontering på en faktura.',
+      '**Skyltkonstruktioner i alla format** med **UV-stabil tryck**.\nVi sköter **polistillstånd och markupplåtelse**.\n**Tryck, montage och demontering** på **en faktura**.',
     image: '/images/IMG_6971-800x800.jpeg',
     alt: 'Skyltställ med reklamskylt',
     href: '/skyltstall',
@@ -51,9 +52,9 @@ const SERVICES: ServiceCard[] = [
     number: '04',
     title: 'Byggstaket',
     simple:
-      'Vi sätter upp staket runt arbetsplatsen så ingen obehörig kommer in och ingen skadar sig.',
+      'Vi sätter upp **staket runt arbetsplatsen** så **ingen obehörig** kommer in och **ingen skadar sig**.',
     technical:
-      'Komplett perimeter med ID06-passage, transportgrindar och insynsskydd. Stadig förankring oavsett om underlaget är gjutet, asfalt eller grus.',
+      '**Komplett perimeter** med **ID06-passage**, transportgrindar och insynsskydd.\n**Stadig förankring** oavsett om underlaget är **gjutet, asfalt eller grus**.',
     image: '/images/safescaff_i51.jpg',
     alt: 'Byggstaket runt arbetsplats',
     href: '/byggstaket',
@@ -75,11 +76,14 @@ export function WhatWeDo() {
               className="heading-section mt-6 text-brand-black"
             />
             <Reveal delay={0.15}>
-              <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-brand-graphite">
-                Vi reser allt som behövs runt en arbetsplats — från ställning och väderskydd
-                till skyltar och staket. Behöver du flera saker? Bara en kontakt, bara en
-                faktura.
-              </p>
+              <Prose
+                className="mt-6 max-w-xl text-[17px] leading-relaxed text-brand-graphite"
+                text={
+                  'Vi reser **allt som behövs** runt en arbetsplats — från **ställning och väderskydd** till **skyltar och staket**.\n' +
+                  'Behöver du **flera saker**?\n' +
+                  'Bara **en kontakt**, bara **en faktura**.'
+                }
+              />
             </Reveal>
           </div>
           <Reveal delay={0.2}>
@@ -118,13 +122,12 @@ export function WhatWeDo() {
                     {s.title}
                   </h3>
 
-                  <p className="mt-4 text-[16px] leading-relaxed text-brand-black">
-                    {s.simple}
-                  </p>
+                  <Prose className="mt-4 text-[16px] leading-relaxed text-brand-black" text={s.simple} />
 
-                  <p className="mt-3 border-l-2 border-brand-green-light pl-4 text-[14px] leading-relaxed text-brand-graphite">
-                    {s.technical}
-                  </p>
+                  <Prose
+                    className="mt-3 border-l-2 border-brand-green-light pl-4 text-[14px] leading-relaxed text-brand-graphite"
+                    text={s.technical}
+                  />
                 </Link>
               </Reveal>
             </li>

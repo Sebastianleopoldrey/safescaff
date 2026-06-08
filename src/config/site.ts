@@ -23,7 +23,7 @@ export const site = {
       phoneTel: '+46705831226',
       email: 'patrik@safescaff.se',
       image: '/images/patrik.webp',
-      bio: 'Bygger SafeScaff sedan 2017. Tar varje samtal personligen — och varje jobb i mål.',
+      bio: 'Bygger SafeScaff **sedan 2017**.\nTar **varje samtal personligen** — och **varje jobb i mål**.',
     },
     {
       name: 'Christian Hahne',
@@ -32,7 +32,7 @@ export const site = {
       phoneTel: '+46705831891',
       email: 'christian@safescaff.se',
       image: '/images/christian.jpg',
-      bio: 'Planerar montagen så att din byggtid håller. Pratar gärna teknik och tidsplaner.',
+      bio: 'Planerar montagen så att **din byggtid håller**.\nPratar gärna **teknik och tidsplaner**.',
     },
   ],
 } as const
@@ -43,7 +43,7 @@ export const services = [
     number: '01',
     title: 'Byggnadsställningar',
     tagline: 'Layher i alla dess former.',
-    short: 'Modul allround och Speedyscaff aluminium — för allt från villarenovering till flervåningsfasad.',
+    short: '**Modul allround och Speedyscaff aluminium** — för allt från **villarenovering** till **flervåningsfasad**.',
     image: '/images/IMG_6978.jpeg',
   },
   {
@@ -51,7 +51,7 @@ export const services = [
     number: '02',
     title: 'Väderskydd',
     tagline: 'Arbeta året runt.',
-    short: 'Keder XL-system som höll genom två stormar på Östra Sjukhuset.',
+    short: '**Keder XL-system** som höll genom **två stormar** på **Östra Sjukhuset**.',
     image: '/images/IMG_1483-scaled.jpg',
   },
   {
@@ -59,7 +59,7 @@ export const services = [
     number: '03',
     title: 'Skyltställ',
     tagline: 'Synlighet som inte missas.',
-    short: 'Skyltställ i alla storlekar — hyr eller köp. Vi tar fram reklamen.',
+    short: '**Skyltställ i alla storlekar** — **hyr eller köp**.\nVi tar fram **reklamen**.',
     image: '/images/IMG_6971-800x800.jpeg',
   },
   {
@@ -67,7 +67,7 @@ export const services = [
     number: '04',
     title: 'Byggstaket',
     tagline: 'Trygg arbetsplats från dag ett.',
-    short: 'Säkra, kvalitetsmärkta staket — kompletterbara med ID06 och transportgrindar.',
+    short: '**Säkra, kvalitetsmärkta staket** — kompletterbara med **ID06 och transportgrindar**.',
     image: '/images/safescaff_i51.jpg',
   },
 ] as const

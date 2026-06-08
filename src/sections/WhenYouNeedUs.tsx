@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { Reveal } from '@/components/Reveal'
 import { TextReveal } from '@/components/TextReveal'
+import { Prose } from '@/components/site/prose'
 
 interface Scenario {
   title: string
@@ -13,25 +14,25 @@ interface Scenario {
 const SCENARIOS: Scenario[] = [
   {
     title: 'Fasadställning för villa',
-    body: 'Aluminiumställning runt huset för putsning, målning eller fönsterbyte. Vi monterar, demonterar och städar tomten.',
+    body: '**Aluminiumställning** runt huset för **putsning, målning eller fönsterbyte**.\nVi **monterar, demonterar och städar tomten**.',
     image: '/images/IMG_1457.jpg',
     href: '/byggnadsstallningar',
   },
   {
     title: 'Tak- och fasadställning för BRF',
-    body: 'Modulställning runt hela fastigheten med boendepassage. Hela renoveringen kan rulla medan boende går säkert in och ut.',
+    body: '**Modulställning** runt hela fastigheten med **boendepassage**.\nHela renoveringen kan **rulla** medan **boende går säkert in och ut**.',
     image: '/images/byggstallning-safescaff-2100x800.jpg',
     href: '/byggnadsstallningar',
   },
   {
     title: 'Ställning och byggstaket för industri och kontor',
-    body: 'Byggnadsställning kombinerad med byggstaket och ID06-passage. Säker arbetsplats utan att stoppa produktion eller transporter.',
+    body: '**Byggnadsställning** kombinerad med **byggstaket och ID06-passage**.\n**Säker arbetsplats** utan att stoppa **produktion eller transporter**.',
     image: '/images/IMG_1116-scaled.jpg',
     href: '/byggstaket',
   },
   {
     title: 'Väderskydd för stora renoveringar',
-    body: 'Keder XL-väderskydd som täcker hela arbetsplatsen så jobbet rullar i regn, snö och kyla. Östra Sjukhuset är vår referens.',
+    body: '**Keder XL-väderskydd** som täcker hela arbetsplatsen så jobbet rullar i **regn, snö och kyla**.\n**Östra Sjukhuset** är vår referens.',
     image: '/images/ostra-sjukhuset.jpg',
     href: '/vaderskydd',
   },
@@ -51,9 +52,10 @@ export function WhenYouNeedUs() {
             className="heading-section mt-6 text-brand-black"
           />
           <Reveal delay={0.15}>
-            <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-brand-graphite">
-              Byggnadsställning, väderskydd och byggstaket — för villa, BRF, kontor och industri i Göteborgsområdet.
-            </p>
+            <Prose
+              className="mt-6 max-w-xl text-[17px] leading-relaxed text-brand-graphite"
+              text="**Byggnadsställning, väderskydd och byggstaket** — för **villa, BRF, kontor och industri** i Göteborgsområdet."
+            />
           </Reveal>
         </div>
 
@@ -78,9 +80,7 @@ export function WhenYouNeedUs() {
                     <h3 className="mt-4 font-display text-[22px] font-semibold leading-tight tracking-tight text-brand-black md:text-[24px]">
                       {s.title}
                     </h3>
-                    <p className="mt-4 text-[15px] leading-relaxed text-brand-graphite">
-                      {s.body}
-                    </p>
+                    <Prose className="mt-4 text-[15px] leading-relaxed text-brand-graphite" text={s.body} />
                     <div className="mt-6 flex items-center justify-end border-t border-brand-gray-light pt-5">
                       <ArrowRight
                         size={16}

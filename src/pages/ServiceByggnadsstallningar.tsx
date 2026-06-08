@@ -11,19 +11,19 @@ import { ContactCTA } from '@/sections/ContactCTA'
 const SEGMENTS = [
   {
     label: 'Fastighetsägare',
-    body: 'Fasadrenovering, fönsterbyte, takarbete på flerbostadshus. Vi planerar runt boendet — inte tvärtom.',
+    body: '**Fasadrenovering, fönsterbyte, takarbete** på flerbostadshus.\nVi planerar **runt boendet** — inte tvärtom.',
   },
   {
     label: 'BRF:er',
-    body: 'Stämmobeslutet är det svåra. Vi kommer ut, mäter, ritar — och levererar en offert ni kan rösta om.',
+    body: '**Stämmobeslutet** är det svåra.\nVi kommer ut, **mäter, ritar** — och levererar en **offert ni kan rösta om**.',
   },
   {
     label: 'Byggentreprenörer',
-    body: 'Underentreprenör som kommer i tid, monterar enligt tidplan och tar ansvar för dokumentationen.',
+    body: 'Underentreprenör som **kommer i tid**, monterar **enligt tidplan** och tar ansvar för **dokumentationen**.',
   },
   {
     label: 'Privatpersoner',
-    body: 'Villarenovering med Speedyscaff aluminium. Snabb resning, ren tomt, fast pris från första samtalet.',
+    body: 'Villarenovering med **Speedyscaff aluminium**.\n**Snabb resning, ren tomt, fast pris** från första samtalet.',
   },
 ]
 
@@ -31,22 +31,22 @@ const STEPS: Step[] = [
   {
     number: '01',
     title: 'Platsbesök',
-    body: 'Vi kommer ut, mäter fasaden och förstår förutsättningarna. Tomt, mark­under­lag, åtkomst, hängande kablar — allt antecknas. Inga gissningar.',
+    body: 'Vi kommer ut, **mäter fasaden** och förstår förutsättningarna.\nTomt, mark­under­lag, åtkomst, hängande kablar — **allt antecknas**.\n**Inga gissningar**.',
   },
   {
     number: '02',
     title: 'Offert',
-    body: 'Tydlig kalkyl med material­specifikation, transport, montagetid och demontering. Inga dolda poster, ingen "tillkommer-listan".',
+    body: '**Tydlig kalkyl** med material­specifikation, transport, montagetid och demontering.\n**Inga dolda poster**, ingen "tillkommer-listan".',
   },
   {
     number: '03',
     title: 'Montering',
-    body: 'STIB-utbildade montörer på plats. Ankarpunkter förankras, koppel kontrolleras, och varje våning besiktas innan nästa reses.',
+    body: '**STIB-utbildade montörer** på plats.\n**Ankarpunkter förankras**, **koppel kontrolleras**, och **varje våning besiktas** innan nästa reses.',
   },
   {
     number: '04',
     title: 'Demontering',
-    body: 'När entreprenaden är klar hämtar vi allt, städar tomten och dokumenterar avlämningen. Ni ser inte att vi varit där.',
+    body: 'När entreprenaden är klar **hämtar vi allt**, **städar tomten** och **dokumenterar avlämningen**.\nNi ser inte att vi varit där.',
   },
 ]
 
@@ -70,27 +70,27 @@ const GALLERY = [
 const FAQ_ITEMS = [
   {
     q: 'Hur lång tid tar det att montera en byggnadsställning?',
-    a: 'En typisk villaställning på 80–120 m² tar 4–6 timmar. En BRF-fasad på 1 500 m² tar normalt 3–5 dagar. Vi ger en exakt tidsuppskattning i offerten — och håller den.',
+    a: 'En typisk villaställning på **80–120 m²** tar **4–6 timmar**.\nEn BRF-fasad på **1 500 m²** tar normalt **3–5 dagar**.\nVi ger en **exakt tidsuppskattning** i offerten — och **håller den**.',
   },
   {
     q: 'Vad kostar det att hyra byggställning i Göteborg?',
-    a: 'Priset beror på yta, höjd, hyrestid och åtkomst — varje projekt är unikt. Vi tar fram en fast offert efter platsbesök, utan dolda kostnader och utan tillkommande poster i efterhand. Platsbesök och offert är alltid kostnadsfria.',
+    a: 'Priset beror på **yta, höjd, hyrestid och åtkomst** — **varje projekt är unikt**.\nVi tar fram en **fast offert** efter platsbesök, **utan dolda kostnader** och utan tillkommande poster i efterhand.\n**Platsbesök och offert är alltid kostnadsfria**.',
   },
   {
     q: 'Vad är skillnaden mellan Layher Allround och Speedyscaff?',
-    a: 'Allround är en stålbaserad modulställning för komplexa fasader, höga laster och långa hyrestider. Speedyscaff är aluminium — lättare att resa, snabbare att demontera, perfekt för villor och kortare projekt. Vi väljer system efter ditt jobb, inte efter vårt lager.',
+    a: '**Allround** är en stålbaserad modulställning för **komplexa fasader, höga laster och långa hyrestider**.\n**Speedyscaff** är aluminium — **lättare att resa, snabbare att demontera**, perfekt för villor och kortare projekt.\nVi väljer system efter **ditt jobb**, inte efter **vårt lager**.',
   },
   {
     q: 'Behöver jag bygglov eller tillstånd för en ställning?',
-    a: 'För ställning på egen tomt: nej. För ställning som inkräktar på allmän mark, trottoar eller väg krävs polistillstånd och TA-plan (trafikanordningsplan). Vi sköter ansökningarna åt dig om det behövs.',
+    a: 'För ställning på **egen tomt: nej**.\nFör ställning som inkräktar på **allmän mark, trottoar eller väg** krävs **polistillstånd och TA-plan** (trafikanordningsplan).\nVi sköter **ansökningarna åt dig** om det behövs.',
   },
   {
     q: 'Vad händer om något händer på arbetsplatsen?',
-    a: 'Alla våra ställningar är ansvarsförsäkrade. STIB-medlemskapet kräver dokumenterad besiktning, och vi har aldrig haft en allvarlig olycka på en SafeScaff-ställning sedan starten 2017. Det är ingen tur — det är systematik.',
+    a: 'Alla våra ställningar är **ansvarsförsäkrade**.\nSTIB-medlemskapet kräver **dokumenterad besiktning**, och vi har **aldrig haft en allvarlig olycka** på en SafeScaff-ställning sedan starten 2017.\nDet är **ingen tur** — det är **systematik**.',
   },
   {
     q: 'Hur snabbt kan ni komma ut på platsbesök?',
-    a: 'Inom 24 timmar i Göteborgsregionen. Akuta jobb tar vi samma dag om det finns kapacitet. Ring Patrik direkt på 0705-83 12 26.',
+    a: '**Inom 24 timmar** i Göteborgsregionen.\n**Akuta jobb** tar vi **samma dag** om det finns kapacitet.\nRing **Patrik** direkt på **0705-83 12 26**.',
   },
 ]
 
@@ -106,7 +106,13 @@ export function ServiceByggnadsstallningar() {
       />
       <ServiceIntro
         lead="Modul allround eller Speedyscaff aluminium — vi har systemet som passar din fasad."
-        body="Vi reser ställningar från 50 till 5 000 kvadratmeter. På villa, BRF, industri, sjukhus. Allt monteras enligt AFS 2013:4 av STIB-utbildade montörer som inte gör avkall på koppel, sparkbräda eller skyddsräcke. När vi lämnar arbetsplatsen står det en ställning där som klarar både årets stormar och en oannonserad inspektion. Det är vad vi menar när vi säger safety first."
+        body={
+          'Vi reser ställningar från **50 till 5 000 kvadratmeter**.\n' +
+          'På **villa, BRF, industri, sjukhus**.\n' +
+          'Allt monteras enligt **AFS 2013:4** av **STIB-utbildade montörer** som inte gör avkall på **koppel, sparkbräda eller skyddsräcke**.\n' +
+          'När vi lämnar arbetsplatsen står det en ställning där som klarar både **årets stormar** och en **oannonserad inspektion**.\n' +
+          'Det är vad vi menar när vi säger **safety first**.'
+        }
       />
       <WhoFor
         items={SEGMENTS}
@@ -114,7 +120,10 @@ export function ServiceByggnadsstallningar() {
         heading="Vem hyr ställning av oss?"
       />
       <ServiceIncluded
-        intro="En byggnadsställning från SafeScaff är aldrig bara material och rör. Det är ett komplett åtagande från första platsbesök till sista demonterad clamp."
+        intro={
+          'En byggnadsställning från SafeScaff är **aldrig bara material och rör**.\n' +
+          'Det är ett **komplett åtagande** från **första platsbesök** till **sista demonterad clamp**.'
+        }
         items={INCLUDED}
       />
       <ServiceProcess steps={STEPS} />

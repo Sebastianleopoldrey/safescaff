@@ -15,6 +15,9 @@ const NAV = [
 export function Header() {
   const [open, setOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
+  // `solid` = gray fixed bar. When false the header is transparent and sits
+  // over a dark hero with white text/logo.
+  const [solid, setSolid] = useState(true)
   const location = useLocation()
 
   useEffect(() => {
@@ -22,9 +25,37 @@ export function Header() {
     setServicesOpen(false)
   }, [location.pathname])
 
+  // Transparent over the hero, solid once it's scrolled past. Pages without a
+  // dark hero ([data-hero]) stay solid all the way up.
+  useEffect(() => {
+    const hero = document.querySelector<HTMLElement>('[data-hero]')
+    if (!hero) {
+      setSolid(true)
+      return
+    }
+    const onScroll = () => {
+      // Switch ~96px (header height) before the hero fully leaves the viewport.
+      setSolid(window.scrollY > hero.offsetHeight - 96)
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+    }
+  }, [location.pathname])
+
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 bg-brand-white/95 text-brand-black backdrop-blur-md">
+      <header
+        className={cn(
+          'fixed inset-x-0 top-0 z-50 transition-colors duration-300',
+          solid
+            ? 'border-b border-brand-gray-light/60 bg-brand-white/95 text-brand-black backdrop-blur-md'
+            : 'border-b border-transparent bg-transparent text-brand-white',
+        )}
+      >
         <div className="container-edge flex h-20 items-center justify-between md:h-24">
           <Link
             to="/"
@@ -34,7 +65,7 @@ export function Header() {
             <img
               src="/images/safescaff-logga.png"
               alt="SafeScaff"
-              className="h-9 w-auto md:h-10"
+              className={cn('h-9 w-auto transition-[filter] duration-300 md:h-10', !solid && 'brightness-0 invert')}
             />
           </Link>
 

@@ -1,5 +1,6 @@
 import { Reveal } from '@/components/Reveal'
 import { TextReveal } from '@/components/TextReveal'
+import { Prose } from '@/components/site/prose'
 
 export interface Step {
   number: string
@@ -30,7 +31,7 @@ export function ServiceProcess({ steps }: ServiceProcessProps) {
                   {s.number}
                 </span>
                 <h3 className="mt-6 font-display text-[22px] font-semibold leading-tight text-brand-black">{s.title}</h3>
-                <p className="mt-4 text-[15px] text-brand-graphite">{s.body}</p>
+                <Prose className="mt-4 text-[15px] text-brand-graphite" text={s.body} />
               </li>
             </Reveal>
           ))}

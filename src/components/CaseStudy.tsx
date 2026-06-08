@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import { Reveal } from './Reveal'
 import { TextReveal } from './TextReveal'
 import { ImageReveal } from './ImageReveal'
+import { Prose } from './site/prose'
 
 export interface CaseStudyData {
   number: string
@@ -48,7 +49,7 @@ export function CaseStudy({ data }: CaseStudyProps) {
           <TextReveal text={data.title} as="h1" className="heading-hero mt-6 text-brand-white" />
           {data.subtitle && (
             <Reveal delay={0.3}>
-              <p className="mt-6 max-w-xl text-[18px] text-white/80">{data.subtitle}</p>
+              <Prose className="mt-6 max-w-xl text-[18px] text-white/80" text={data.subtitle} />
             </Reveal>
           )}
         </div>
@@ -136,7 +137,7 @@ function CaseBlock({ eyebrow, heading, body }: { eyebrow: string; heading: strin
         <TextReveal text={heading} as="h3" className="heading-section mt-4 text-brand-black" />
       </div>
       <Reveal delay={0.15} y={30}>
-        <p className="max-w-2xl text-[18px] leading-relaxed text-brand-graphite">{body}</p>
+        <Prose className="max-w-2xl text-[18px] leading-relaxed text-brand-graphite" text={body} />
       </Reveal>
     </div>
   )

@@ -1,6 +1,7 @@
 import { Check } from 'lucide-react'
 import { Reveal } from '@/components/Reveal'
 import { TextReveal } from '@/components/TextReveal'
+import { Prose } from '@/components/site/prose'
 
 interface ServiceIncludedProps {
   intro: string
@@ -17,7 +18,7 @@ export function ServiceIncluded({ intro, items }: ServiceIncludedProps) {
           </Reveal>
           <TextReveal text="Hela kedjan." as="h2" className="heading-section mt-6 text-brand-black" />
           <Reveal delay={0.15} y={30}>
-            <p className="mt-6 max-w-md text-[17px] text-brand-graphite">{intro}</p>
+            <Prose className="mt-6 max-w-md text-[17px] text-brand-graphite" text={intro} />
           </Reveal>
         </div>
 

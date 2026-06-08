@@ -1,4 +1,5 @@
 import { Reveal } from '@/components/Reveal'
+import { Prose } from '@/components/site/prose'
 
 interface ServiceIntroProps {
   lead: string
@@ -15,7 +16,7 @@ export function ServiceIntro({ lead, body }: ServiceIntroProps) {
           </p>
         </Reveal>
         <Reveal delay={0.1} y={30}>
-          <p className="text-[17px] leading-relaxed text-brand-graphite">{body}</p>
+          <Prose className="text-[17px] leading-relaxed text-brand-graphite" text={body} />
         </Reveal>
       </div>
     </section>

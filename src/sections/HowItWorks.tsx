@@ -1,6 +1,7 @@
 import { PhoneCall, MapPin, FileText, HardHat, Construction, Truck } from 'lucide-react'
 import { Reveal } from '@/components/Reveal'
 import { TextReveal } from '@/components/TextReveal'
+import { Prose } from '@/components/site/prose'
 
 interface Step {
   icon: typeof PhoneCall
@@ -15,42 +16,42 @@ const STEPS: Step[] = [
     icon: PhoneCall,
     number: '01',
     title: 'Du hör av dig',
-    body: 'Ring Patrik direkt eller fyll i kontaktformuläret. Berätta vad du ska göra — fasad, tak, fönster — så hör vi om det är något för oss.',
+    body: 'Ring **Patrik** direkt eller fyll i **kontaktformuläret**.\nBerätta vad du ska göra — **fasad, tak, fönster** — så hör vi om det är något för oss.',
     duration: '5 min',
   },
   {
     icon: MapPin,
     number: '02',
     title: 'Vi kommer ut och kollar',
-    body: 'Inom 24 timmar är någon av oss på plats och mäter. Tomt, mark, åtkomst, hängande kablar. Allt antecknas. Det kostar inget.',
+    body: '**Inom 24 timmar** är någon av oss på plats och **mäter**.\nTomt, mark, åtkomst, hängande kablar.\n**Allt antecknas**.\n**Det kostar inget**.',
     duration: 'Inom 24h',
   },
   {
     icon: FileText,
     number: '03',
     title: 'Du får en fast offert',
-    body: 'Tydlig kalkyl med material, transport, montagetid och demontering. Inga dolda poster. Vad det står ska gälla — det är hela poängen.',
+    body: '**Tydlig kalkyl** med material, transport, montagetid och demontering.\n**Inga dolda poster**.\nVad det står ska gälla — det är **hela poängen**.',
     duration: '1–3 dagar',
   },
   {
     icon: HardHat,
     number: '04',
     title: 'Vi monterar',
-    body: 'STIB-utbildade montörer på plats. Du behöver inte vara hemma. Skyddsräcken, sparkbräda, ankarpunkter — allt enligt AFS 2013:4.',
+    body: '**STIB-utbildade montörer** på plats.\nDu behöver **inte vara hemma**.\nSkyddsräcken, sparkbräda, ankarpunkter — allt enligt **AFS 2013:4**.',
     duration: 'Per offert',
   },
   {
     icon: Construction,
     number: '05',
     title: 'Du jobbar tryggt',
-    body: 'Ställningen står stadigt under hela hyresperioden. Behöver något justeras kommer vi tillbaka. Service ingår — det är inte en extra-faktura.',
+    body: 'Ställningen står **stadigt** under hela hyresperioden.\nBehöver något justeras **kommer vi tillbaka**.\n**Service ingår** — det är inte en extra-faktura.',
     duration: 'Hyresperiod',
   },
   {
     icon: Truck,
     number: '06',
     title: 'Vi monterar ner och städar',
-    body: 'När entreprenaden är klar hämtar vi allt och städar tomten. Du ser inte att vi varit där — bortsett från det färdiga arbetet bakom oss.',
+    body: 'När entreprenaden är klar **hämtar vi allt** och **städar tomten**.\nDu ser inte att vi varit där — bortsett från det **färdiga arbetet** bakom oss.',
     duration: '1–3 dagar',
   },
 ]
@@ -69,10 +70,13 @@ export function HowItWorks() {
             className="heading-section mt-6 text-brand-black"
           />
           <Reveal delay={0.15}>
-            <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-brand-graphite">
-              Att anlita ett ställningsföretag ska kännas enkelt — inte bli ett projekt
-              i sig. Så här ser vägen från ditt samtal till färdigt jobb ut.
-            </p>
+            <Prose
+              className="mt-6 max-w-xl text-[17px] leading-relaxed text-brand-graphite"
+              text={
+                'Att anlita ett ställningsföretag ska kännas **enkelt** — inte bli **ett projekt i sig**.\n' +
+                'Så här ser vägen från **ditt samtal** till **färdigt jobb** ut.'
+              }
+            />
           </Reveal>
         </div>
 
@@ -91,7 +95,7 @@ export function HowItWorks() {
                   <h3 className="mt-6 font-display text-[22px] font-semibold leading-tight tracking-tight text-brand-black">
                     {s.title}
                   </h3>
-                  <p className="mt-4 text-[15px] leading-relaxed text-brand-graphite">{s.body}</p>
+                  <Prose className="mt-4 text-[15px] leading-relaxed text-brand-graphite" text={s.body} />
                 </article>
               </Reveal>
             </li>

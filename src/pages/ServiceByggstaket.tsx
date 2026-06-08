@@ -11,19 +11,19 @@ import { ContactCTA } from '@/sections/ContactCTA'
 const SEGMENTS = [
   {
     label: 'Byggentreprenörer',
-    body: 'Komplett perimeter med transportgrindar, ID06-passage och belysning. Levererat innan första betongbilen rullar in.',
+    body: '**Komplett perimeter** med **transportgrindar, ID06-passage och belysning**.\nLevererat **innan första betongbilen rullar in**.',
   },
   {
     label: 'Industri & lager',
-    body: 'Tillfällig avstängning vid om- och tillbyggnad. Stabilt även när det är trafik runt om.',
+    body: '**Tillfällig avstängning** vid **om- och tillbyggnad**.\n**Stabilt** även när det är **trafik runt om**.',
   },
   {
     label: 'Event & kultur',
-    body: 'Avgränsning runt scen, festival eller marknad. Snabb resning, säker förankring, lika snabb demontering.',
+    body: 'Avgränsning runt **scen, festival eller marknad**.\n**Snabb resning, säker förankring**, lika snabb demontering.',
   },
   {
     label: 'Småhusprojekt',
-    body: 'Mindre staketslingor runt nybyggnationer eller tillbyggnader. Säkrar både fordonstrafik och nyfikna grannar.',
+    body: '**Mindre staketslingor** runt **nybyggnationer eller tillbyggnader**.\nSäkrar både **fordonstrafik och nyfikna grannar**.',
   },
 ]
 
@@ -31,22 +31,22 @@ const STEPS: Step[] = [
   {
     number: '01',
     title: 'Platsbesök',
-    body: 'Vi mäter sträckning, identifierar passager för fordon och människor, och kontrollerar underlag — asfalt, grus, gjuten platta.',
+    body: 'Vi mäter **sträckning**, identifierar **passager för fordon och människor**, och kontrollerar underlag — **asfalt, grus, gjuten platta**.',
   },
   {
     number: '02',
     title: 'Specifikation',
-    body: 'ID06-passage, transportgrindar, höjder, eventuell duk eller insynsskydd. Exakt det du behöver, inget extra på fakturan.',
+    body: '**ID06-passage, transportgrindar, höjder**, eventuell duk eller insynsskydd.\n**Exakt det du behöver**, **inget extra på fakturan**.',
   },
   {
     number: '03',
     title: 'Montering',
-    body: 'På plats inom utlovad tid. Stadigt monterat med fundament, motvikter eller markförankring beroende på underlag.',
+    body: 'På plats **inom utlovad tid**.\n**Stadigt monterat** med **fundament, motvikter eller markförankring** beroende på underlag.',
   },
   {
     number: '04',
     title: 'Service',
-    body: 'Vi justerar och underhåller under hela hyresperioden. En sektion blåser ner — vi är där och fixar.',
+    body: 'Vi **justerar och underhåller** under hela hyresperioden.\nEn sektion blåser ner — **vi är där och fixar**.',
   },
 ]
 
@@ -69,23 +69,23 @@ const GALLERY = [
 const FAQ_ITEMS = [
   {
     q: 'Hur snabbt kan ni resa byggstaket?',
-    a: 'En typisk perimeter på 100–200 löpmeter monteras på en arbetsdag. Större projekt över 500 m löper på 2–3 dagar inklusive grindar och ID06-passage.',
+    a: 'En typisk perimeter på **100–200 löpmeter** monteras på **en arbetsdag**.\nStörre projekt över **500 m** löper på **2–3 dagar** inklusive grindar och ID06-passage.',
   },
   {
     q: 'Vad är ID06 och behöver jag det?',
-    a: 'ID06 är branschstandarden för åtkomstkontroll på byggarbetsplatser. Krävs på de flesta större entreprenader och hos seriösa beställare. Vi installerar och kopplar ID06-passage som en del av montaget.',
+    a: '**ID06** är **branschstandarden för åtkomstkontroll** på byggarbetsplatser.\nKrävs på de flesta **större entreprenader** och hos **seriösa beställare**.\nVi **installerar och kopplar ID06-passage** som en del av montaget.',
   },
   {
     q: 'Kan ni montera staket på asfalt utan att skada underlaget?',
-    a: 'Ja. Vi använder motvikter eller justerbara fötter som inte kräver borrning. För längre hyresperioder eller hög vindlast kan vi gjuta tillfälliga fundament som plockas bort utan synliga spår.',
+    a: '**Ja.**\nVi använder **motvikter eller justerbara fötter** som **inte kräver borrning**.\nFör längre hyresperioder eller hög vindlast kan vi gjuta **tillfälliga fundament** som **plockas bort utan synliga spår**.',
   },
   {
     q: 'Vad kostar det att hyra byggstaket?',
-    a: 'Priset sätts per löpmeter och vecka, och påverkas av sektionstyp och hyrestid. Längre hyresperioder ger lägre veckopris. Grindar, ID06 och insynsskydd specificeras separat i offerten. Platsbesök och offert är alltid kostnadsfria.',
+    a: 'Priset sätts **per löpmeter och vecka**, och påverkas av **sektionstyp och hyrestid**.\n**Längre hyresperioder** ger **lägre veckopris**.\n**Grindar, ID06 och insynsskydd** specificeras separat i offerten.\n**Platsbesök och offert är alltid kostnadsfria**.',
   },
   {
     q: 'Ingår underhåll om något händer under hyresperioden?',
-    a: 'Ja. Skadade sektioner byts utan extra kostnad om felet inte beror på vandalisering eller åverkan från entreprenör. Service ingår — det är skillnaden mellan att hyra av oss och att hyra av en bilfirma.',
+    a: '**Ja.**\n**Skadade sektioner byts utan extra kostnad** om felet inte beror på **vandalisering eller åverkan från entreprenör**.\n**Service ingår** — det är skillnaden mellan att hyra av oss och att hyra av en bilfirma.',
   },
 ]
 
@@ -101,7 +101,12 @@ export function ServiceByggstaket() {
       />
       <ServiceIntro
         lead="När arbetsplatsen är säkrad kan teamet fokusera på det de är där för att göra."
-        body="Säkra, kvalitetsmärkta byggstaket — kompletterbara med ID06-passage och transportgrindar. Vi vet att en obehörig som tar sig in kan stoppa hela projektets schema. Därför bygger vi inte bara staket, vi bygger en perimeter som faktiskt fungerar — från första fundamentet till sista demonterad sektion. Det är en del av att leverera ett projekt utan obehagliga överraskningar."
+        body={
+          '**Säkra, kvalitetsmärkta byggstaket** — kompletterbara med **ID06-passage och transportgrindar**.\n' +
+          'Vi vet att **en obehörig som tar sig in** kan stoppa **hela projektets schema**.\n' +
+          'Därför bygger vi inte bara staket, vi bygger en **perimeter som faktiskt fungerar** — från första fundamentet till sista demonterad sektion.\n' +
+          'Det är en del av att leverera ett projekt **utan obehagliga överraskningar**.'
+        }
       />
       <WhoFor
         items={SEGMENTS}
@@ -109,7 +114,7 @@ export function ServiceByggstaket() {
         heading="Vem litar på vår perimeter?"
       />
       <ServiceIncluded
-        intro="Komplett perimetersäkring för byggarbetsplatser av alla storlekar."
+        intro="**Komplett perimetersäkring** för byggarbetsplatser **av alla storlekar**."
         items={INCLUDED}
       />
       <ServiceProcess steps={STEPS} />

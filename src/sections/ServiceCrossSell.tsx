@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import { Reveal } from '@/components/Reveal'
 import { TextReveal } from '@/components/TextReveal'
+import { Prose } from '@/components/site/prose'
 import { services } from '@/config/site'
 
 interface ServiceCrossSellProps {
@@ -35,7 +36,7 @@ export function ServiceCrossSell({ excludeSlug }: ServiceCrossSellProps) {
                   <h3 className="mt-8 font-display text-[26px] font-semibold leading-tight tracking-tight text-brand-black">
                     {s.title}
                   </h3>
-                  <p className="mt-3 text-[15px] text-brand-graphite">{s.short}</p>
+                  <Prose className="mt-3 text-[15px] text-brand-graphite" text={s.short} />
                 </Link>
               </li>
             </Reveal>
