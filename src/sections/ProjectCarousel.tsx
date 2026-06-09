@@ -108,7 +108,10 @@ export function ProjectCarousel() {
           const isLink = !!p.href && p.status === 'live'
           const cardWidth = { width: 'min(560px, 85vw)' }
           const inner = (
-            <motion.article data-card>
+            <motion.article
+              data-card
+              className="flex h-full flex-col overflow-hidden border border-brand-gray-light bg-brand-white transition-colors group-hover:border-brand-black"
+            >
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-brand-gray-light">
                 <img
                   src={p.image}
@@ -127,14 +130,17 @@ export function ProjectCarousel() {
                   </div>
                 )}
               </div>
-              <div className="mt-6 flex items-baseline justify-between gap-4">
-                <span className="label-mono text-brand-gray">{p.number}</span>
-                <span className="label-mono text-brand-gray">{p.scope}</span>
+              {/* Divider + padded text block so each image clearly owns its text. */}
+              <div className="flex flex-1 flex-col border-t border-brand-gray-light p-6 md:p-7">
+                <div className="flex items-baseline justify-between gap-4">
+                  <span className="label-mono text-brand-gray">{p.number}</span>
+                  <span className="label-mono text-brand-gray">{p.scope}</span>
+                </div>
+                <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight text-brand-black transition-colors group-hover:text-brand-green md:text-3xl">
+                  {p.title}
+                </h3>
+                <Prose className="mt-3 text-[15px] text-brand-graphite" text={p.body} />
               </div>
-              <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight text-brand-black transition-colors group-hover:text-brand-green md:text-3xl">
-                {p.title}
-              </h3>
-              <Prose className="mt-3 max-w-md text-[15px] text-brand-graphite" text={p.body} />
             </motion.article>
           )
 

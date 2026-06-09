@@ -101,10 +101,10 @@ export function Footer() {
         </div>
       </div>
 
-      <div aria-hidden className="container-edge -mb-2 select-none overflow-hidden pb-0">
+      <div aria-hidden className="container-edge -mb-2 select-none pb-0">
         <span
-          className="block text-center font-display font-bold leading-[0.78] tracking-[-0.06em]"
-          style={{ fontSize: 'clamp(120px, 25vw, 320px)' }}
+          className="block whitespace-nowrap text-center font-display font-bold leading-[0.82] tracking-[-0.06em]"
+          style={{ fontSize: 'clamp(40px, 16vw, 260px)' }}
         >
           SafeScaff.
         </span>
