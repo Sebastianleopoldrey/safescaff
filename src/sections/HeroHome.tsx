@@ -17,11 +17,12 @@ export function HeroHome() {
   const opacity = useTransform(scrollY, [0, 600], [1, 0])
 
   return (
-    // data-hero wraps both the video and the mobile dark intro so the header
-    // stays transparent over the whole hero block, then turns solid after it.
-    <div data-hero>
+    <div>
+      {/* data-hero is only on the video, so the header turns solid (dark logo)
+          as soon as the light intro section reaches the top. */}
       <section
         ref={ref}
+        data-hero
         className="relative h-[62svh] min-h-[460px] w-full overflow-hidden bg-brand-black text-brand-white md:h-[100svh] md:min-h-[640px]"
       >
         <motion.div className="absolute inset-0" style={{ y }}>
@@ -104,17 +105,17 @@ export function HeroHome() {
         </motion.div>
       </section>
 
-      {/* PROFESS-style dark intro — mobile only. Keeps the hero copy readable
-          below a clean, prominent video instead of crowding the video itself. */}
-      <section className="bg-brand-black py-14 text-center text-brand-white md:hidden">
+      {/* PROFESS-style intro — mobile only. Keeps the hero copy readable below a
+          clean, prominent video, on the same light tone as the rest of the site. */}
+      <section className="bg-brand-offwhite py-14 text-center text-brand-graphite md:hidden">
         <div className="container-edge">
-          <Prose className="mx-auto max-w-md text-[17px] leading-relaxed text-white/85" text={HERO_BODY} />
+          <Prose className="mx-auto max-w-md text-[17px] leading-relaxed text-brand-graphite" text={HERO_BODY} />
           <div className="mt-8 flex flex-col gap-3">
             <Link to="/kontakt" className="btn-primary group w-full justify-center">
               Få offert inom 24h
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Link>
-            <a href="#tjanster" className="btn-ghost w-full justify-center text-brand-white">
+            <a href="#tjanster" className="btn-ghost w-full justify-center text-brand-black">
               Se vad vi gör
             </a>
           </div>
