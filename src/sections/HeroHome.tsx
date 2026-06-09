@@ -5,10 +5,14 @@ import { ArrowRight, ArrowDown } from 'lucide-react'
 import { TextReveal } from '@/components/TextReveal'
 import { Prose } from '@/components/site/prose'
 
-const HERO_BODY =
+// On mobile: HERO_TOP sits under the heading (over the video), HERO_REST goes
+// in the light section below the video. On desktop the full body shows in the hero.
+const HERO_TOP =
   '**STIB-medlem.** **20 000 kvm** material i lager.\n' +
-  'Svar på offertförfrågan **inom 24 timmar**.\n' +
+  'Svar på offertförfrågan **inom 24 timmar**.'
+const HERO_REST =
   'Vi reser **byggnadsställningar och väderskydd** i Göteborg som klarar både **stormarna** och **inspektörens checklista**.'
+const HERO_BODY = HERO_TOP + '\n' + HERO_REST
 
 export function HeroHome() {
   const ref = useRef<HTMLDivElement>(null)
@@ -61,8 +65,17 @@ export function HeroHome() {
             stagger={0.08}
           />
 
-          {/* Body copy + CTAs sit in the hero overlay on desktop. On mobile they
-              move to the dark section below so the video stays clean (PROFESS-style). */}
+          {/* Mobile: the two key facts sit right under the heading, over the video. */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.3 }}
+            className="mt-6 md:hidden"
+          >
+            <Prose className="mx-auto max-w-md text-[16px] leading-relaxed text-white/85" text={HERO_TOP} />
+          </motion.div>
+
+          {/* Desktop: full body copy + CTAs sit in the hero overlay. */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -109,7 +122,7 @@ export function HeroHome() {
           clean, prominent video, on the same light tone as the rest of the site. */}
       <section className="bg-brand-offwhite py-14 text-center text-brand-graphite md:hidden">
         <div className="container-edge">
-          <Prose className="mx-auto max-w-md text-[17px] leading-relaxed text-brand-graphite" text={HERO_BODY} />
+          <Prose className="mx-auto max-w-md text-[17px] leading-relaxed text-brand-graphite" text={HERO_REST} />
           <div className="mt-8 flex flex-col gap-3">
             <Link to="/kontakt" className="btn-primary group w-full justify-center">
               Få offert inom 24h
