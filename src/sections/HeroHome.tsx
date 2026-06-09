@@ -128,7 +128,7 @@ export function HeroHome() {
               Få offert inom 24h
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Link>
-            <a href="#tjanster" className="btn-ghost w-full justify-center text-brand-black">
+            <a href="#tjanster" className="btn-ghost w-full justify-center bg-brand-white text-brand-black">
               Se vad vi gör
             </a>
           </div>
