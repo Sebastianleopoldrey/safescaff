@@ -14,38 +14,38 @@ export function TrustBand() {
       aria-label="Trovärdighet och certifieringar"
       className="border-b border-brand-gray-light bg-brand-offwhite"
     >
-      <div className="container-edge py-6 md:py-8">
-        <div className="flex flex-wrap items-center justify-between gap-x-10 gap-y-6">
-          <Reveal>
-            <div className="flex items-center gap-4">
-              <img
-                src="/images/STIB_logo_medl_stallningsforetagen.png"
-                alt="Medlem i STIB"
-                className="h-12 w-auto md:h-14"
-                loading="eager"
-              />
-              <div className="hidden flex-col leading-tight sm:flex">
-                <span className="font-display text-[15px] font-semibold text-brand-black">
-                  Medlem i STIB
-                </span>
-                <span className="text-[12px] text-brand-graphite">Branschens kvalitetsstämpel</span>
-              </div>
+      <div className="container-edge py-8 md:py-10">
+        <Reveal>
+          <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
+            <img
+              src="/images/STIB_logo_medl_stallningsforetagen.png"
+              alt="Medlem i STIB"
+              className="h-12 w-auto md:h-14"
+              loading="eager"
+            />
+            <div className="flex flex-col leading-tight">
+              <span className="font-display text-[15px] font-semibold text-brand-black">
+                Medlem i STIB
+              </span>
+              <span className="text-[12px] text-brand-graphite">Branschens kvalitetsstämpel</span>
             </div>
-          </Reveal>
+          </div>
+        </Reveal>
 
-          <ul className="flex flex-wrap items-baseline gap-x-8 gap-y-3 md:gap-x-12">
-            {STATS.map((s, i) => (
-              <Reveal key={s.label} delay={0.05 + i * 0.04}>
-                <li className="flex flex-col leading-tight">
-                  <span className="font-display text-[20px] font-semibold tracking-tight text-brand-black md:text-[22px]">
+        <ul className="mt-8 grid grid-cols-1 gap-px border border-brand-gray-light bg-brand-gray-light sm:grid-cols-5">
+          {STATS.map((s, i) => (
+            <li key={s.label} className="bg-brand-white">
+              <Reveal delay={0.05 + i * 0.04}>
+                <div className="flex h-full flex-col items-center justify-center gap-1 px-4 py-6 text-center">
+                  <span className="font-display text-[22px] font-semibold tracking-tight text-brand-black md:text-[24px]">
                     {s.value}
                   </span>
                   <span className="label-mono text-[11px] text-brand-graphite">{s.label}</span>
-                </li>
+                </div>
               </Reveal>
-            ))}
-          </ul>
-        </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )
