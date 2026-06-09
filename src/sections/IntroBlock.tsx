@@ -9,7 +9,7 @@ const STATS = ['8 ÅR', '20 000 KVM', 'STIB SEDAN 2024', 'GÖTEBORG']
 
 export function IntroBlock() {
   return (
-    <section className="bg-brand-offwhite py-24 md:py-40">
+    <section className="bg-brand-offwhite pt-10 pb-24 md:py-40">
       <div className="container-edge grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
         <div>
           <Reveal>

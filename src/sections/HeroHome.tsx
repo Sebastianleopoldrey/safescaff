@@ -120,7 +120,7 @@ export function HeroHome() {
 
       {/* PROFESS-style intro — mobile only. Keeps the hero copy readable below a
           clean, prominent video, on the same light tone as the rest of the site. */}
-      <section className="bg-brand-offwhite py-14 text-center text-brand-graphite md:hidden">
+      <section className="bg-brand-offwhite pt-14 pb-6 text-center text-brand-graphite md:hidden">
         <div className="container-edge">
           <Prose className="mx-auto max-w-md text-[17px] leading-relaxed text-brand-graphite" text={HERO_REST} />
           <div className="mt-8 flex flex-col gap-3">
