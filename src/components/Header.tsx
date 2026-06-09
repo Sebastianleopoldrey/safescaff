@@ -65,7 +65,7 @@ export function Header() {
             <img
               src="/images/safescaff-logga.png"
               alt="SafeScaff"
-              className={cn('h-9 w-auto transition-[filter] duration-300 md:h-10', !solid && 'brightness-0 invert')}
+              className="h-9 w-auto md:h-10"
             />
           </Link>
 

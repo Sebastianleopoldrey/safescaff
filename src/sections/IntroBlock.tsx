@@ -34,7 +34,7 @@ export function IntroBlock() {
           <Reveal delay={0.25} y={30}>
             <ul className="mt-12 grid grid-cols-2 gap-px border border-brand-gray-light bg-brand-gray-light sm:grid-cols-4">
               {STATS.map((s) => (
-                <li key={s} className="flex items-center justify-center bg-brand-offwhite px-4 py-6 text-center">
+                <li key={s} className="flex items-center justify-center bg-brand-white px-4 py-6 text-center">
                   <span className="label-mono text-brand-black">{s}</span>
                 </li>
               ))}
