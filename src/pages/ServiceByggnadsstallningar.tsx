@@ -90,7 +90,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'Hur snabbt kan ni komma ut på platsbesök?',
-    a: '**Inom 24 timmar** i Göteborgsregionen.\n**Akuta jobb** tar vi **samma dag** om det finns kapacitet.\nRing **Patrik** direkt på **0705-83 12 26**.',
+    a: 'Så snart det passar dig i Göteborgsregionen — **ofta inom några dagar**.\n**Akuta jobb** försöker vi lösa snabbare om det finns kapacitet.\nRing **Patrik** direkt på **0705-83 12 26**.',
   },
 ]
 

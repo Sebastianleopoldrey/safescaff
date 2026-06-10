@@ -68,7 +68,7 @@ export function Contact() {
             <Prose
               className="mt-8 max-w-xl text-[18px] text-white/80"
               text={
-                'Vi återkommer **inom 24 timmar** på vardagar.\n' +
+                'Vi återkommer **så snart vi kan** på vardagar.\n' +
                 '**Akut?** Ring direkt på **' + site.phone + '**.'
               }
             />
@@ -110,7 +110,7 @@ export function Contact() {
             <Reveal delay={0.2} y={30}>
               <Prose
                 className="mt-8 max-w-md text-[17px] text-brand-graphite"
-                text="Fyll i **formuläret** så återkommer vi **inom 24 timmar** med **nästa steg**."
+                text="Fyll i **formuläret** så återkommer vi **så snart vi kan** med **nästa steg**."
               />
             </Reveal>
             <Reveal delay={0.3} y={30}>

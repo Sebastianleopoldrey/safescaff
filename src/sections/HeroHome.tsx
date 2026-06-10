@@ -9,7 +9,7 @@ import { Prose } from '@/components/site/prose'
 // in the light section below the video. On desktop the full body shows in the hero.
 const HERO_TOP =
   '**STIB-medlem.** **20 000 kvm** material i lager.\n' +
-  'Svar på offertförfrågan **inom 24 timmar**.'
+  '**Kostnadsfri offert** utan bindning.'
 const HERO_REST =
   'Vi reser **byggnadsställningar och väderskydd** i Göteborg som klarar både **stormarna** och **inspektörens checklista**.'
 const HERO_BODY = HERO_TOP + '\n' + HERO_REST
@@ -92,7 +92,7 @@ export function HeroHome() {
             className="mt-10 hidden flex-wrap items-center gap-3 md:flex md:justify-start"
           >
             <Link to="/kontakt" className="btn-primary group">
-              Få offert inom 24h
+              Få kostnadsfri offert
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Link>
             <a href="#tjanster" className="btn-ghost text-brand-white">
@@ -125,7 +125,7 @@ export function HeroHome() {
           <Prose className="mx-auto max-w-md text-[17px] leading-relaxed text-brand-graphite" text={HERO_REST} />
           <div className="mt-8 flex flex-col gap-3">
             <Link to="/kontakt" className="btn-primary group w-full justify-center">
-              Få offert inom 24h
+              Få kostnadsfri offert
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Link>
             <a href="#tjanster" className="btn-ghost w-full justify-center bg-brand-white text-brand-black">

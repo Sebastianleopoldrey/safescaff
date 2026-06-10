@@ -5,7 +5,7 @@ import { Reveal } from '@/components/Reveal'
 import { Prose } from '@/components/site/prose'
 import { site } from '@/config/site'
 
-const TRUST = ['STIB-medlem sedan 2024', '8 år', '20 000 kvm', 'Östra Sjukhuset', '24h svar']
+const TRUST = ['STIB-medlem sedan 2024', '8 år', '20 000 kvm', 'Östra Sjukhuset', 'Kostnadsfri offert']
 
 export function ContactCTA() {
   return (
@@ -25,7 +25,7 @@ export function ContactCTA() {
             className="mx-auto mt-8 max-w-xl text-[17px] text-brand-gray"
             text={
               'Skicka en **förfrågan** eller **ring direkt**.\n' +
-              'Du får svar **inom 24 timmar** — eller **samma dag** om du ringer **Patrik**.'
+              'Vi återkommer **så snart vi kan** — ringer du **Patrik** går det ofta snabbast.'
             }
           />
         </Reveal>

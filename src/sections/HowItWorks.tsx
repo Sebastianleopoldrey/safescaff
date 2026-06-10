@@ -23,8 +23,8 @@ const STEPS: Step[] = [
     icon: MapPin,
     number: '02',
     title: 'Vi kommer ut och kollar',
-    body: '**Inom 24 timmar** är någon av oss på plats och **mäter**.\nTomt, mark, åtkomst, hängande kablar.\n**Allt antecknas**.\n**Det kostar inget**.',
-    duration: 'Inom 24h',
+    body: 'När det passar dig kommer någon av oss ut och **mäter**.\nTomt, mark, åtkomst, hängande kablar.\n**Allt antecknas**.\n**Det kostar inget**.',
+    duration: 'Snabbt',
   },
   {
     icon: FileText,

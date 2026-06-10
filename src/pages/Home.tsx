@@ -15,7 +15,7 @@ import { featureFlags } from '@/config/featureFlags'
 const HOME_FAQ = [
   {
     q: 'Hur snabbt kan ni komma igång?',
-    a: '**Platsbesök inom 24 timmar** i Göteborgsregionen.\n**Offert inom 1–3 arbetsdagar** efter besöket.\nSjälva monteringen schemaläggs i samråd — för en typisk villa kan vi ofta vara på plats **inom 1–2 veckor**.',
+    a: 'Vi bokar in ett **platsbesök** så snart det passar dig i Göteborgsregionen.\n**Offert kort efter** besöket.\nSjälva monteringen schemaläggs i samråd — för en typisk villa kan vi ofta vara på plats **inom ett par veckor**.',
   },
   {
     q: 'Måste jag söka tillstånd?',
