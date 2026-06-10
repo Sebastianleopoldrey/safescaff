@@ -2,10 +2,9 @@ import { HeroHome } from '@/sections/HeroHome'
 import { TrustBand } from '@/sections/TrustBand'
 import { WhatWeDo } from '@/sections/WhatWeDo'
 import { ImageGridHome } from '@/sections/ImageGridHome'
-import { WhenYouNeedUs } from '@/sections/WhenYouNeedUs'
+import { CaseReferences } from '@/sections/CaseReferences'
 import { IntroBlock } from '@/sections/IntroBlock'
 import { HowItWorks } from '@/sections/HowItWorks'
-import { ProjectCarousel } from '@/sections/ProjectCarousel'
 import { PricingTransparency } from '@/sections/PricingTransparency'
 import { Testimonials } from '@/sections/Testimonials'
 import { FAQ } from '@/components/FAQ'
@@ -51,9 +50,8 @@ export function Home() {
       <TrustBand />
       <WhatWeDo />
       <ImageGridHome />
-      <WhenYouNeedUs />
+      <CaseReferences />
       <HowItWorks />
-      <ProjectCarousel />
       <PricingTransparency />
       {featureFlags.showTestimonials && <Testimonials />}
       <FAQ
